@@ -1,0 +1,38 @@
+\documentclass[french,a4paper,11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage[french]{babel}
+\usepackage{pdfpages}
+\usepackage{hyphenat}
+
+\title{Trieur de billes de roulement}
+\author{Robin Bonny \and Leon Locher \and Axel Sutter \and Nicola Windler}
+\date{Juin 2018}
+
+\hyphenation{}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\include{Sections/Introduction}
+
+\section{Cahier des charges}
+\includepdf{Documents/Instructions.pdf}
+
+\include{Sections/Concepts}
+\include{Sections/Justifications}
+\include{Sections/Descriptifs}
+\include{Sections/Dessins_ensemble}
+\include{Sections/Dessins_detail_usinees}
+\include{Sections/Dessins_detail_achetees}
+\include{Sections/Plan}
+\include{Sections/Mode emploi}
+\include{Sections/Annexe}
+
+\end{document}

@@ -1,0 +1,14 @@
+\section{Concepts}
+Pour parvenir à créer une machine capable de trier des billes de roulement à bille, il nous a fallu résoudre deux problèmes: l'acheminement des billes, et leur tri.
+
+\subsection{Acheminement}
+Pour l'acheminement des billes, nous avons tout d'abord imaginé un réservoir au fond incliné contenant les billes, et débouchant sur une série de roues dentées qui permettent de réguler le flux de billes.
+
+Nous avons dans un premier temps imaginé un réservoir rectangulaire, en forme de parallélépipède creux. Mais l'usinage d'une telle pièce exige le forage d'un cube de métal, ce qui entraîne un important gaspillage. Ainsi, nous avons pensé à assembler des plaques ensemble grâce à des vis, afin d'économiser de la matière et de diminuer le coût de notre machine. Finalement, l'idée d'un cylindre associé à un fond sphérique s'est imposée comme étant la plus économe et la plus rapide à assembler. En effet, le cylindre peut être un simple tuyau coupé à la bonne longueur et usiné sur un seul côté, et le fond consiste en une plaque sphérique. De plus, les deux pièces peuvent facilement être assemblées grâce à ... vis.
+
+Ensuite, nous avons dû imaginé un mécanisme permettant d'acheminer les billes vers la zone de tri de manière régulée, tout en évitant absolument le coincement. Ainsi, l'idée de routes dentées dimensionnées pour contenir exactement une bille dans chaque compartiment s'est imposée comme étant la meilleure. En effet, une série de roues dentées décalées d'une dent (...) permet de prélever un nombre précis de billes en vue du tri.
+
+Les routes dentées sont actionnées grâce à une manivelle qui transmet le mouvement de rotation grâce à un arbre.
+
+\subsection{Tri}
+Pour le tri des billes, nous avons développé un système de rails parallèles, s'écartant par pallier. Cela permet de récolter les petites billes d'abord, les moyennes ensuite et finalement les plus grosses. L'écartement par pallier permet aussi d'éviter le coincement. En effet, nous avions tout d'abord pensé à un écartement progressif des rails, mais les billes ralentissent alors fortement avant de tomber, ce qui peut provoquer l'arrêt des billes suivantes. En effet, plus le diamètre de la bille se rapproche de la distance entre les rails, plus la bille descend, et son axe de rotation se rapproche de son axe de symétrie horizontal. Il en résulte une augmentation de la vitesse de rotation de la bille, et une diminution de sa vitesse horizontale. Ainsi, la bille qui suit risque de frotter contre celle qui ralentit, et la force de frottement entre les deux, amplifiée par l'augmentation de la vitesse angulaire de la première bille, risque de stopper les billes sur le rails, bloquant alors le mécanisme.
