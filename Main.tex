@@ -1,18 +1,23 @@
-\documentclass[french,a4paper,11pt]{article}
+\documentclass[french,a4paper,11pt]{report}
 
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} % Input en UTF-8
+\usepackage[T1]{fontenc} % Output en UTF-(
 %\usepackage{natbib}
-\usepackage{graphicx}
-\usepackage[french]{babel}
-\usepackage{pdfpages}
-\usepackage{hyphenat}
+\usepackage{graphicx} % Graphiques & figures
+\usepackage[french]{babel} % Correction en français
+\usepackage{pdfpages} % Insérer PDFs externes comme pages
+\usepackage{hyphenat} % Coupure de mots avancée
+\usepackage{enumitem} % Énumération avancée
 
 \title{Trieur de billes de roulement}
 \author{Robin Bonny \and Leon Locher \and Axel Sutter \and Nicola Windler}
 \date{Juin 2018}
 
-\hyphenation{}
+\hyphenation{} % Insérer ici les mots que ne sont pas automatiquement coupés
+
+\setcounter{secnumdepth}{3} % Profondeur de la numérotation
+\setcounter{tocdepth}{2} % Profondeur de la table des matières
+
 
 \begin{document}
 
@@ -22,7 +27,7 @@
 
 \include{Sections/Introduction}
 
-\section{Cahier des charges}
+\chapter{Cahier des charges}
 \includepdf{Documents/Instructions.pdf}
 
 \include{Sections/Concepts}
