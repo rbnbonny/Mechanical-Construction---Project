@@ -1,1 +1,23 @@
 \chapter{Justifications des choix}
+
+\section{Réservoir pour les billes mixtes}
+
+\section{Acheminement}
+
+\section{Séparation et rails}
+
+\section{Réservoir pour les billes triées}
+La version finale du réservoir pour les billes triées était le troisième brouillon. Au contraire du premier brouillon, la version finale nous permet d'enlever les containers avec les billes triées séparément. Cela sans que la construction des pièces soit difficile, ce qui a exclu le deuxième brouillon. Voici ces deux raisons principales en plus de détail:
+
+\subsection{Containers flexibles}
+Quelque soit l'utilisation des billes triées, la flexibilité des containers qui permet d'enlever tous les billes triées de la même taille au même temps, est sans contredit utile. L'efficacité de la machine en service est donc bien mieux que si on devrait enlever tous les billes par main d'un container fixé. Le positionnement exact des containers est garanti par une plaque %{insérer lien dessin sol}
+qui entoure les pieds de chacun des containers. Le jeu pour enlever les containers est d'un millimètre en haut ainsi qu'en bas. C'est asses grand pour qu'ils ne se coincent pas et assez petit pour que la distance entre le haut du container et la prochaine pièce est de 4 mm, ce qui garanti que même les billes les plus petites trouvent leur chemin dans le bon réservoir, une fois tombé à travers des rails.
+
+\subsection{Usinage}
+Nous avons décidé d'augmenter le nombre de pièces afin de simplifier leur usinage. Parmi les pièces utilisées il n'y a aucune pièce qui ne pouvait pas être usiné par des procès courants, certaines même sans assistance par ordinateur. La décomposition en pièces faciles à usiner est une avantage pour la production mais non pas pour l'assemblage de la machine. Si l'un voulait lancer la machine en production en grande série il devrait reconsidérer ce choix. En grande nombre même des pièces plus complexes sont moins chères car les coûts de la configuration de l'usinage peuvent être réparti sur plusieurs pièces est font donc une plus petite partie du prix de la pièce. Nous avons estimé que pour notre projet le surcroît des dépenses se compense facilement avec l'économie pendant l'usinage.\\
+
+En outre nous avons fait intervenir des parois qui s'achètent bon-marché. En découpant un paroi nous obtenons une pièce que se utilise facilement comme partie d'un container. Comme déjà dit nous nous avons désistés de réajuster la taille des réservoirs à la taille des billes correspondantes en faveur de la simplicité dans la production. La taille du rayon interne du paroi se calculait comme suit: 
+
+\begin{equation}r\textsubscript{int}\geq\sqrt{\frac{2\ V}{\pi\ l}}=\sqrt{\frac{2\ 77'175\ mm^3}{\pi\ 100\ mm}} \approx 22.2\ mm \label{eq:1}\end{equation}
+
+Avec \(V=77'175\ mm^3\) calculé par la formule \ref{eq:volumereservoirfin} et \(l=100\ mm\) la longueur interne adapté à la largeur des rails. En ajoutant un petit facteur de sécurité si les billes ne s'empilent pas le plus compact possible et en fixant l'épaisseur de la paroi de \(2\ mm \) nous avons obtenu un rayon externe de la paroi de \(r\textsubscript{ext}=25\ mm\).
