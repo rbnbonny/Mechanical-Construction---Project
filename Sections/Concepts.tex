@@ -3,7 +3,7 @@ Pour parvenir à créer une machine capable de trier des billes de roulement à 
 
 %\section{Répartition du projet}
 
-Vu que nous étions un groupe de quatre étudiants, nous avons décidé de répartir la machine en quatre parties. Les deux problèmes principaux susmentionnés fûrent les deux divisés en deux. Ensuite, chacun de nous s'occupait de concevoir le/les mécanisme/s nécessaires pour que la machine comme ensemble puisse satisfaire les conditions imposées par le cahier des charges. Notre division fut la suivante:
+Vu que nous étions un groupe de quatre étudiants, nous avons décidé de répartir la machine en quatre parties. Les deux problèmes principaux susmentionnés ont été les deux divisés en deux. Ensuite, chacun de nous s'est occupé de concevoir le/les mécanisme/s nécessaire/s pour que la machine dans son ensemble puisse satisfaire les conditions imposées par le cahier des charges. Notre division fut la suivante:
 \begin{itemize}
     \item Réservoir pour les billes mixtes
     \item Acheminement
@@ -14,34 +14,44 @@ Vu que nous étions un groupe de quatre étudiants, nous avons décidé de répa
 \section{Réservoir pour billes mixtes}
 
 \subsection{Concepts imaginés}
-\begin{itemize}
-    \item Nous avons dans un premier temps imaginé un réservoir rectangulaire, en forme de parallélépipède creux. Mais l’usinage d’une telle pièce exige le forage d’un cube de métal, ce qui entraîne un important gaspillage. 
-    \item Ainsi, nous avons pensé à assembler des plaques ensemble grâce à des vis, afin d’économiser de la matière et de diminuer le coût de notre machine. L'inconvénient était alors le grand nombre de pièces nécessaires pour un simple réservoir (parois, vis). 
-    \item Finalement, l’idée d’un cylindre creux associé à un fond sphérique s’est imposée comme étant la plus économe et la plus rapide à assembler. En effet, le cylindre peut être un simple tuyau coupé à la bonne longueur et usiné sur un seul côté pour permettre la sortie du réservoir. Le fond incliné consiste en une plaque sphérique usinée pour obtenir l'inclinaison nécessaire à l'évacuation des billes. De plus, les deux pièces peuvent facilement être assemblées grâce à 2 vis.
-\end{itemize}
+Nous avons dans un premier temps imaginé un réservoir rectangulaire, en forme de parallélépipède creux. Mais l’usinage d’une telle pièce exige le forage d’un cube de métal, ce qui entraîne un important gaspillage. 
+Ensuite, l’idée d’un cylindre creux associé à un fond sphérique s’est imposée comme étant la plus économe et la plus rapide à assembler. En effet, le cylindre peut être un simple tuyau coupé à la bonne longueur et usiné sur un seul côté pour permettre la sortie du réservoir. Le fond incliné consiste en une plaque sphérique usinée pour obtenir l'inclinaison nécessaire à l'évacuation des billes. De plus, les deux pièces peuvent facilement être assemblées grâce à 2 vis.
 
-%image manque
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{Graphics/Reservoir_initial/RESERVOIR_CYLINDRIQUE.pdf}
+    \caption{Réservoir cylindrique}
+    %\label{fig:B4}
+\end{figure}
+
+Finalement, nous avons conçu un réservoir en deux pièces usinées, pour répondre aux exigences de formes à l'entrée des roues dentées. En effet, une rampe d'accès rectangulaire était plus pratique et plus simple que celle du réservoir cylindrique. De plus, seulement deux vis sont nécessaires pour assembler les pièces du réservoir. 
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{Graphics/Reservoir_initial/RESERVOIR_CUBE.pdf}
+    \caption{Réservoir cubique(final)}
+    %\label{fig:B4}
+\end{figure}
 
 \section{Acheminement}
 Ce mécanisme devait satisfaire plusieurs contraintes et demandes à la fois. Il était préscrit que notre machine s'opère à une main et que le tri des billes soit déclenché par l'utilisateur et ne se déclenche pas soi-même. En plus, tout coincement devait être prévenu.
 
-Les options élaborés en groupe étaient alors les suivantes:\\
+Les options élaborées en groupe étaient alors les suivantes:\\
 Pour l'entraînement des billes:
 
 \subsection{Convoyeur à vis}
-Notre première idée fut une convoyeur à vis qui transporte les billes vers les railles. Les billes sortent alors du réservoir mixte et roulent vers la convoyeur à vis. Là ils tombent dedans et la rotation provenant de la manivelle les entraîne vers les rails.
+Notre première idée fut une convoyeur à vis qui transporte les billes vers les rails. Les billes sortent alors du réservoir mixte et roulent vers le convoyeur à vis. La rotation provenant de la manivelle les entraîne ensuite vers les rails.
 
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{Graphics/Images_concepts_Leon/795-Screw_conveyor.png}
-    \caption{Convoyer à vis}
+    \caption{Convoyeur à vis}
     %\label{fig:B4}
 \end{figure}
 
-Mais après tout cette idée fut impraticable à cause de plusieurs raisons. Premièrement le coût est sûrement plus élevé que celui des autres alternatives. Et deuxièmement on ne trouvait pas de solution satisfaisante pour empêcher le coincement des billes.
+Mais après tout cette idée fut impraticable à cause de plusieurs raisons. Premièrement, le coût était sûrement plus élevé que celui des autres alternatives, et deuxièmement, nous ne trouvions pas de solution satisfaisante pour empêcher de manière certaine le coincement des billes.
 
 \subsection{Cylindre avec des trous}
-La deuxième option qu'on a élaboré était un cylindre long avec des petits trous dedans. Comme avec la convoyeur à vis les billes roulent hors du réservoir mixte et tombent dans les trous du cylindre tournant. Comme pour la première idée on prévoyait une manivelle pour l'opération du mécanisme.
+La deuxième option qu'on a élaboré était un long cylindre avec de petits trous usinés à sa surface. Comme avec le convoyeur à vis, les billes roulent hors du réservoir mixte et tombent dans les trous du cylindre tournant. Comme pour la première idée, nous prévoyions une manivelle pour l'opération du mécanisme.
 
 \begin{figure}
     \centering
@@ -50,19 +60,19 @@ La deuxième option qu'on a élaboré était un cylindre long avec des petits tr
     %\label{fig:B5}
 \end{figure}
 
-Cette option était finalement abandonnée car la fabrication aurait coûté plus chère que celle de la troisième option (cf. en bas). On aurait du faire des alésages très précis au lieu de juste fraiser des roues dentées.
+Cette option a finalement été abandonnée, car la fabrication aurait coûté plus cher que celle de la troisième option (cf. en bas). Nous aurions dû faire des alésages très précis au lieu de juste fraiser des roues dentées.
 
-\subsection{Roues dentées décalés}
-Notre troisième idée était de simplement monter des roues dentées sur une barre et de les décaler d'un dent à la fois.
+\subsection{Distributeur avec cylindres décalés}
+Notre troisième idée était de simplement monter des cylindres sur une barre et de décaler deux roues voisines d'une dent.
 
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{Graphics/Roue/DRAWING_ROUES_DENTEES_DECALES.pdf}
-    \caption{Roues dentées décalés}
+    \caption{Cylindres perforés décalés}
     %\label{fig:B6}
 \end{figure}
 
-Les billes provenant du réservoir mixte roulent alors doucement (à cause de la pente modérée)  vers les roues dentés. Après ils tombent entre les dents et sont entraînés vers les railles par la rotations induite par l'opération de la manivelle.
+Les billes provenant du réservoir mixte roulent alors doucement (grâce à la pente modérée)  vers les cylindres perforés. Elles tombent ensuite entre les trous et sont entraînées vers les rails par la rotation des roues, actionnées par la manivelle.
 
 \begin{figure}
     \centering
@@ -73,7 +83,7 @@ Les billes provenant du réservoir mixte roulent alors doucement (à cause de la
 
 Pour le déblocage:
 \subsection{Un pivot positionné à la sortie du réservoir pour empêcher l'empilement des billes} 
-Notre première option pour le déblocage fût un pivot positionné à la sortie du réservoir mixte. Ce pivot aurait été connecté à l'axe de rotation de l'acheminement par une chaîne ou une autre connexion permettant la transformation de la rotation en "pivotement". Ainsi tout empilement néfaste des billes dans le réservoir aurait été empêche par l'utilisation de la manivelle.
+Notre première option pour le déblocage fût un pivot positionné à la sortie du réservoir mixte. Ce pivot aurait été connecté à l'axe de rotation de l'acheminement par une chaîne ou une autre connexion permettant la transformation de la rotation en "pivotement". Ainsi, tout empilement pouvant créer un coincement des billes dans le réservoir aurait été empêché par l'utilisation de la manivelle.
 
 \begin{figure}
     \centering
@@ -83,7 +93,7 @@ Notre première option pour le déblocage fût un pivot positionné à la sortie
 \end{figure}
 
 \subsection{Couvercle pour la roue dentée}
-Plutôt comme mécanisme de déblocage supplémentaire on prévoyait un couvercle pour le mécanisme d'acheminement. Avec des dents/trous d'une profondeur de 5 mm même les billes de diamètre 7 pourront passer sous un couvercle à distance 2,5 mm du mécanisme d'acheminement. Par contre dès qu'il y aura deux billes dans un/e dent/trou même pour le pire des cas (deux billes de la taille la plus petite) la deuxième bille heurtera le couvercle en dessous ou exactement avec son centre de masse. Ainsi elle sera enlevée et on aura l'assurance qu'à chaque fois un a qu'une bille par dent/trou.
+Comme mécanisme de déblocage supplémentaire, nous prévoyions un couvercle pour le mécanisme d'acheminement. Avec des dents/trous d'une profondeur de 5 mm, même les billes de diamètre 7 peuvent passer sous un couvercle à distance 2,5 mm du mécanisme d'acheminement. Par contre, dès qu'il y aura deux billes dans un trou, même pour le pire des cas (deux billes de la taille la plus petite, soit 5 mm), la deuxième bille heurtera le couvercle en dessous ou exactement à la hauteur de son centre de masse. Ainsi, ce système prévient tout coincement à l'entrée des cylindres perforés et assure le passage d'une seule bille par trou.
 
 \begin{figure}
     \centering
@@ -109,15 +119,15 @@ Plutôt comme mécanisme de déblocage supplémentaire on prévoyait un couvercl
 \section{Séparation \& tri (rails)}
 
 \subsection{Séparation}
-Après que les billes sont acheminés hors du réservoir, les billes doivent être séparées de manière successive pour ne pas bloquer le mécanisme de tri que suit.
+Après que les billes ont été acheminées hors du réservoir, elles doivent être séparées de manière successive pour ne pas bloquer le mécanisme de tri qui suit.
 
 \subsubsection{Coins}
-La première idée était de ordonner les billes en utilisant des coins sur un plan inclinée. Cette méthode menait à plusieurs problèmes: la pièce est devenue très compliqué à fabriquer, cause des composantes arrondies et le risque du coincement des billes ne pourrait pas être éliminé suffisamment.
+La première idée était d'ordonner les billes en utilisant des coins sur un plan incliné. Cette méthode débouchait cependant sur plusieurs problèmes: la pièce est devenue très compliquée à fabriquer, à cause de l'usinage particulier des parties surélevées en forme d'ogive. De plus, le risque de coincement des billes ne pouvait pas être éliminé avec certitude.
 
 % image
 
 \subsubsection{Rainures}
-Après avoir abandonné l'idée avec les coins, nous avons cherché une autre solution pour guider les billes qui arrivent de la roue dentée sur les rails. Notre deuxième option était de séparer les billes, pas avec des autres pièces, mais par leur propre poids. Cette idée consistait d'une plaque avec des rainures en forme arrondi ou linéaire. Ces deux options sont pas optimales non plus, il fallait fraiser les cercles ou les formes "V" dans une plaque, un défaut que augmentera le coût de cette pièce beaucoup plus.
+Après avoir abandonné l'idée des coins, nous avons cherché une autre solution pour guider les billes qui arrivent de la roue dentée sur les rails. Notre deuxième option était de séparer les billes, non pas grâce à d'autres pièces, mais par leur propre poids. Cette idée consistait en une plaque avec des rainures de forme arrondie ou linéaire. Ces deux options n'étaient pourtant pas optimales non plus, car il fallait fraiser les cercles ou les formes en "V" dans une plaque, un défaut qui augmentera beaucoup le coût de cette pièce.
 
 % image
 
@@ -125,28 +135,28 @@ Après avoir abandonné l'idée avec les coins, nous avons cherché une autre so
 À ce point vient la partie principale de tout l'ensemble, le tri des billes en dépendance de leur diamètre.
 
 \subsubsection{Ecartement graduel}
-Notre première idée pour trier les billes en trois différentes tailles, était d'utiliser des rails quasi-perpendiculaires qui s'écartaient de manière graduelle. 
+Notre première idée pour trier des billes de trois tailles différentes était d'utiliser des rails quasi-parallèles qui s'écartaient de manière graduelle. 
 
 % image
 
 \subsubsection{Ecartement séquentiel}
-Pour résoudre les faiblesses de l'écartement graduel, nous l'avons adapté et sont arrivés au écartement séquentiel. L'avantage de cette technique est que les billes ne ralentissent pas dans leur rails, mais roulent avec une vitesse constante, jusqu'au point où se trouve le saut d'un diamètre au prochain et tombent dans le réservoir au-dessous.
+Pour résoudre les faiblesses de l'écartement graduel, nous l'avons adapté et sommes arrivés à un écartement séquentiel. L'avantage de cette technique est que les billes ne ralentissent pas dans leurs rails, mais roulent avec une vitesse constante, jusqu'au point où se trouve le saut d'un diamètre au prochain et tombent dans le réservoir au-dessous.
 
 % image
 
 \subsubsection{Plaque inclinée et barres}
-Une idée alternative aux solutions avec les rails, était de monter des barres au-dessus d'une plaque inclinée de manière que les billes avec un diamètre donné seront transportées à coté de la plaque et les billes plus petites passaient au-dessous de la barre jusqu'à la prochaine.
+Une idée alternative aux solutions avec les rails était de monter des barres au-dessus d'une plaque inclinée, de manière à ce que les billes avec un diamètre donné seront transportées à coté de la plaque et les billes plus petites passent au-dessous de la barre jusqu'à la prochaine.
 
 % image
 
 \subsubsection{Ecartement séquentiel avec rainures}
-L'idée finale qui était incorporée dans le projet, est celle des rails avec un écartement séquentiel en combinaison avec les rainures en forme "V" tous dans une seule pièce. Comme ça, les parties de la séparation des billes et leur tri en combiné et la complexité de l'ensemble et réduite même plus.
+L'idée finale, qui a été retenue dans le projet, est celle des rails avec un écartement séquentiel en combinaison avec les rainures en forme "V", le tout en une seule pièce. Ainsi, les parties de séparation des billes et de leur tri sont combinées, et la complexité de l'ensemble est réduite au maximum.
 
 \section{Réservoir pour les billes triées}
-Les exigences au réservoir pour les billes triées sont clairs: Il nous fallait trois containers placés ainsi que tous les billes d'une même taille tombent dans le réservoir prévu pour leur taille.
+Les exigences pour le réservoir des billes triées sont clairs: Il nous fallait trois containers placés de sorte que toutes les billes de même diamètre tombent dans le réservoir prévu pour leur taille.
 
 \subsection{Premier brouillon}
-La construction des rails nous a donné un espace limité ou les billes d'une taille tombent. Ca veut dire qu'il y a trois rectangles l'un juste à côte de l'autre. Pour simplifier la construction nous les avons choisi de la même taille, indépendant de la taille des billes. Le premier brouillon était donc un réservoir avec un fond incliné pour que les billes s'accumulent tous de la même côté.
+La construction des rails nous a donné un espace limité où les billes d'une taille tombent. Cela veut dire qu'il y a trois rectangles l'un juste à côte de l'autre. Pour simplifier la construction nous les avons choisi de la même taille, indépendant de la taille des billes. Le premier brouillon était donc un réservoir avec un fond incliné pour que les billes s'accumulent tous du même côté.
 
 \begin{figure}
     \centering
@@ -155,19 +165,19 @@ La construction des rails nous a donné un espace limité ou les billes d'une ta
     %\label{fig:B1}
 \end{figure}
 
-Les billes devaient ainsi être enlevé par main du réservoir qui peut poser des problèmes à cause de la petite taille. Nous avons alors décidé de faire des containers qui peuvent être enlevé lors de la prise des billes. 
+Les billes devaient ainsi être enlevées à la main du réservoir, ce qui peut poser des problèmes à cause de la petite taille. Nous avons alors décidé de faire des containers qui peuvent être enlevés pour récupérer les billes. 
 
 \subsection{Deuxième brouillon}
-La forme choisie pour les containers était un cube. Alors il nous fallait une rampe afin de canaliser les billes dans les cubes.  Le dimensionnement des cubes se déroulait en prise en compte de la taille des billes. Au pire cas les 300 billes sont de la même taille. Alors les cubes doivent être capable de prendre 300 billes de la taille respective. Pour simplifier la construction les cubes ont tous la même taille sans respecter la taille des billes. Le volume des cubes à alors été donné par:
+La forme choisie pour les containers était un cube. Il nous fallait alors une rampe, afin de canaliser les billes dans les cubes.  Le dimensionnement des cubes se déroulait en prise en compte de la taille des billes. Dans le pire des cas, les 300 billes sont de la même taille : les cubes doivent alors être capables de contenir 300 billes de la taille respective. Pour simplifier la construction, les cubes ont tous la même taille sans respecter la taille des billes. Le volume des cubes est alors donné par:
 \begin{equation}
     V = 7^3\ 300\ d \approx 7^3\ 300\ 0.75 = 77'175\ mm^3
     \label{eq:volumereservoirfin}
 \end{equation}
 
-Où \(d = \frac{ \pi }{3\sqrt{2}} \approx 0.75\) est la densité volumique de l'empilement compact de billes. La longueur des arêtes intérieures du cube sont alors donné par: 
+Où \(d = \frac{ \pi }{3\sqrt{2}} \approx 0.75\) est la densité volumique de l'empilement compact de billes. La longueur des arêtes intérieures du cube est alors donnée par: 
 \[l\textsubscript{int}=\sqrt[3]{77'175\ mm^3} \approx 42.5\ mm\]
 
-Avec une certaine tolérance si les billes ne s'empilent pas aussi compacte que possible, nous avons choisi une longueur d'arête extérieure de \({l\textsubscript{ext}=49~mm}\). Pour utiliser le place de la manière la plus efficace, nous avons inversé l'orientation de la rampe au milieu. Comme ça les containers ne se trouvent pas tous sur une ligne, ce qui rends la machine plus compacte. 
+Avec une certaine tolérance, si les billes ne s'empilent pas de manière aussi compacte que possible, nous avons choisi une longueur d'arête extérieure de \({l\textsubscript{ext}=49~mm}\). Pour utiliser le place de la manière la plus efficace possible, nous avons inversé l'orientation de la rampe au milieu. Ainsi, les containers ne se trouvent pas tous sur une ligne, ce qui rend la machine plus compacte. 
 
 \begin{figure}
     \centering
@@ -178,7 +188,7 @@ Avec une certaine tolérance si les billes ne s'empilent pas aussi compacte que 
 
 
 \subsection{Troisième brouillon}
-Vue que l'assemblage avec vis de plus de 4 mm n'est pas possible pour certaines  éléments du deuxième brouillon (i.e. les cubes) et que la fabrication par fraisage à partir d'un seul bloc est bien trop coûteux et inefficace, nous avons remanié le brouillon en respectant ces aspects. La forme oblong des containers nous a permis de supprimer les rampes au dessous du réservoir et donc de diminuer le nombre d'éléments.
+Vu que l'assemblage avec des vis de plus de 4 mm n'est pas possible pour certaines éléments du deuxième brouillon (i.e. les cubes) et que la fabrication par fraisage à partir d'un seul bloc est bien trop coûteux et inefficace, nous avons remanié le brouillon en respectant ces aspects. La forme allongée des containers nous a permis de supprimer les rampes au-dessous du réservoir et donc de diminuer le nombre d'éléments.
 
 \begin{figure}
     \centering
