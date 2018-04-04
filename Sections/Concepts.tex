@@ -33,7 +33,7 @@ Finalement, nous avons conçu un réservoir en deux pièces usinées, pour répo
 \end{figure}
 
 \section{Acheminement}
-Ce mécanisme devait satisfaire plusieurs contraintes et demandes à la fois. Il était préscrit que notre machine s'opère à une main et que le tri des billes soit déclenché par l'utilisateur et ne se déclenche pas soi-même. En plus, tout coincement devait être prévenu.
+Ce mécanisme devait satisfaire plusieurs contraintes et demandes à la fois. Il était prescrit que notre machine s'opère à une main et que le tri des billes soit déclenché par l'utilisateur et ne se déclenche pas soi-même. De plus, tout coincement devait être prévenu.
 
 Les options élaborées en groupe étaient alors les suivantes:\\
 Pour l'entraînement des billes:
@@ -124,25 +124,38 @@ Après que les billes ont été acheminées hors du réservoir, elles doivent ê
 \subsubsection{Coins}
 La première idée était d'ordonner les billes en utilisant des coins sur un plan incliné. Cette méthode débouchait cependant sur plusieurs problèmes: la pièce est devenue très compliquée à fabriquer, à cause de l'usinage particulier des parties surélevées en forme d'ogive. De plus, le risque de coincement des billes ne pouvait pas être éliminé avec certitude.
 
-% image
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{Graphics/Rails/COINS.pdf}
+    \caption{Séparation par coins}
+    %\label{fig:S_Coins}
+\end{figure}
 
 \subsubsection{Rainures}
 Après avoir abandonné l'idée des coins, nous avons cherché une autre solution pour guider les billes qui arrivent de la roue dentée sur les rails. Notre deuxième option était de séparer les billes, non pas grâce à d'autres pièces, mais par leur propre poids. Cette idée consistait en une plaque avec des rainures de forme arrondie ou linéaire. Ces deux options n'étaient pourtant pas optimales non plus, car il fallait fraiser les cercles ou les formes en "V" dans une plaque, un défaut qui augmentera beaucoup le coût de cette pièce.
 
-% image
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{Graphics/Rails/SEPARATEUR_V.pdf}
+    \caption{Séparation par rainures en forme "V"}
+    %\label{fig:S_Rainures}
+\end{figure}
 
 \subsection{Tri}
 À ce point vient la partie principale de tout l'ensemble, le tri des billes en dépendance de leur diamètre.
 
 \subsubsection{Ecartement graduel}
-Notre première idée pour trier des billes de trois tailles différentes était d'utiliser des rails quasi-parallèles qui s'écartaient de manière graduelle. 
-
-% image
+Notre première idée pour trier des billes de trois tailles différentes était d'utiliser des rails quasi-parallèles qui s'écartaient de manière graduelle.
 
 \subsubsection{Ecartement séquentiel}
 Pour résoudre les faiblesses de l'écartement graduel, nous l'avons adapté et sommes arrivés à un écartement séquentiel. L'avantage de cette technique est que les billes ne ralentissent pas dans leurs rails, mais roulent avec une vitesse constante, jusqu'au point où se trouve le saut d'un diamètre au prochain et tombent dans le réservoir au-dessous.
 
-% image
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{Graphics/Rails/ECARTEMENTS.pdf}
+    \caption{Comparaison d'un écartement graduel (a) et d'un écartement séquentiel (b)}
+    %\label{fig:Ecartements}
+\end{figure}
 
 \subsubsection{Plaque inclinée et barres}
 Une idée alternative aux solutions avec les rails était de monter des barres au-dessus d'une plaque inclinée, de manière à ce que les billes avec un diamètre donné seront transportées à coté de la plaque et les billes plus petites passent au-dessous de la barre jusqu'à la prochaine.
@@ -185,7 +198,6 @@ Avec une certaine tolérance, si les billes ne s'empilent pas de manière aussi 
     \caption{Deuxième brouillon}
     %\label{fig:B2}
 \end{figure}
-
 
 \subsection{Troisième brouillon}
 Vu que l'assemblage avec des vis de plus de 4 mm n'est pas possible pour certaines éléments du deuxième brouillon (i.e. les cubes) et que la fabrication par fraisage à partir d'un seul bloc est bien trop coûteux et inefficace, nous avons remanié le brouillon en respectant ces aspects. La forme allongée des containers nous a permis de supprimer les rampes au-dessous du réservoir et donc de diminuer le nombre d'éléments.
