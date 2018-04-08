@@ -81,7 +81,7 @@ Les billes provenant du réservoir mixte roulent alors doucement (grâce à la p
     %\label{fig:B7}
 \end{figure}
 
-Pour le déblocage:
+Pour le déblocage: %altérer
 \subsection{Un pivot positionné à la sortie du réservoir pour empêcher l'empilement des billes} 
 Notre première option pour le déblocage fût un pivot positionné à la sortie du réservoir mixte. Ce pivot aurait été connecté à l'axe de rotation de l'acheminement par une chaîne ou une autre connexion permettant la transformation de la rotation en "pivotement". Ainsi, tout empilement pouvant créer un coincement des billes dans le réservoir aurait été empêché par l'utilisation de la manivelle.
 
@@ -119,10 +119,10 @@ Comme mécanisme de déblocage supplémentaire, nous prévoyions un couvercle po
 \section{Séparation \& tri (rails)}
 
 \subsection{Séparation}
-Après que les billes ont été acheminées hors du réservoir, elles doivent être séparées de manière successive pour ne pas bloquer le mécanisme de tri qui suit.
+Après que les billes ont été acheminées hors du réservoir, elles doivent être séparées de manière successive pour ne pas bloquer le mécanisme de tri qui suit. Comme plusieurs billes sont triées au même temps, une méthode efficace de séparation devrait nécessaire. 
 
 \subsubsection{Coins}
-La première idée était d'ordonner les billes en utilisant des coins sur un plan incliné. Cette méthode débouchait cependant sur plusieurs problèmes: la pièce est devenue très compliquée à fabriquer, à cause de l'usinage particulier des parties surélevées en forme d'ogive. De plus, le risque de coincement des billes ne pouvait pas être éliminé avec certitude.
+La première idée que nous avons trouvé, était d'ordonner les billes en utilisant des coins sur un plan incliné. Cette méthode débouchait cependant sur plusieurs problèmes: la pièce est devenue très compliquée à fabriquer, à cause de l'usinage particulier des parties surélevées en forme d'ogive. De plus, le risque de coincement des billes ne pouvait pas être éliminé avec certitude.
 
 \begin{figure}
     \centering
@@ -132,7 +132,11 @@ La première idée était d'ordonner les billes en utilisant des coins sur un pl
 \end{figure}
 
 \subsubsection{Rainures}
-Après avoir abandonné l'idée des coins, nous avons cherché une autre solution pour guider les billes qui arrivent de la roue dentée sur les rails. Notre deuxième option était de séparer les billes, non pas grâce à d'autres pièces, mais par leur propre poids. Cette idée consistait en une plaque avec des rainures de forme arrondie ou linéaire. Ces deux options n'étaient pourtant pas optimales non plus, car il fallait fraiser les cercles ou les formes en "V" dans une plaque, un défaut qui augmentera beaucoup le coût de cette pièce.
+Après avoir abandonné l'idée des coins, nous avons cherché une autre solution pour guider les billes qui arrivent du convoyeur à vis sur les rails. Notre deuxième option était de séparer les billes, non pas grâce à d'autres pièces, mais par leur propre poids. Cette idée consistait en une plaque avec des rainures de forme arrondie ou linéaire. Comme les billes de deux roues du convoyeur arrivent sur un seul rail, il s'agit de la manière la plus efficace et simple pour guider les billes sur le mécanisme de tri. Pour garantir que tous les billes arrivent à la même position relatif aux rails, nous avons décidé d'usiner les rainures pas en forme arrondie, mais linéaire, en forme "V".
+
+Nous sommes conscients que cette décision d'usiner les rainures directement dans une plaque et pas les assembler à partir des pièces plus simples, rend cette partie de la machine plus complexe à usiner, mais nous sommes arrivés à la conclusion que cette décision était nécessaire pour assurer le positionnement précis et le tri exact des billes.
+
+%Ces deux options n'étaient pourtant pas optimales non plus, car il fallait fraiser les cercles ou les formes en "V" dans une plaque, un défaut qui augmentera beaucoup le coût de cette pièce.
 
 \begin{figure}
     \centering
@@ -145,10 +149,11 @@ Après avoir abandonné l'idée des coins, nous avons cherché une autre solutio
 À ce point vient la partie principale de tout l'ensemble, le tri des billes en dépendance de leur diamètre.
 
 \subsubsection{Ecartement graduel}
-Notre première idée pour trier des billes de trois tailles différentes était d'utiliser des rails quasi-parallèles qui s'écartaient de manière graduelle.
+Notre première idée pour trier des billes, était d'utiliser des rails quasi-parallèles qui s'écartaient de manière graduelle. Nous avons rejeté ce concept assez vite, le raisonnement pour cette décision se trouve sur %ref Justification
+Le problème principal de cette méthode est que les billes perdent beaucoup de leur vélocité en avançant sur les rails, ce qui mène à des bouchons et finalement au blocage du mécanisme.
 
 \subsubsection{Ecartement séquentiel}
-Pour résoudre les faiblesses de l'écartement graduel, nous l'avons adapté et sommes arrivés à un écartement séquentiel. L'avantage de cette technique est que les billes ne ralentissent pas dans leurs rails, mais roulent avec une vitesse constante, jusqu'au point où se trouve le saut d'un diamètre au prochain et tombent dans le réservoir au-dessous.
+Pour résoudre les faiblesses de l'écartement graduel, nous l'avons adapté et sommes arrivés à un écartement séquentiel. L'avantage de cette technique est que les billes ne ralentissent pas dans leurs rails, mais roulent avec une vitesse constante, jusqu'au point où se trouve le saut d'un diamètre au prochain et elles tombent dans le réservoir correspondant au-dessous.
 
 \begin{figure}
     \centering
@@ -158,12 +163,12 @@ Pour résoudre les faiblesses de l'écartement graduel, nous l'avons adapté et 
 \end{figure}
 
 \subsubsection{Plaque inclinée et barres}
-Une idée alternative aux solutions avec les rails était de monter des barres au-dessus d'une plaque inclinée, de manière à ce que les billes avec un diamètre donné seront transportées à coté de la plaque et les billes plus petites passent au-dessous de la barre jusqu'à la prochaine.
+Une idée alternative aux solutions avec les rails était de monter des barres au-dessus d'une plaque inclinée, de manière à ce que les billes avec un diamètre donné seront transportées à coté de la plaque et les billes plus petites passent au-dessous de la barre jusqu'à la prochaine. Cette idée est développée en plus de détail sur la figure %ref fig
 
 % image
 
-\subsubsection{Ecartement séquentiel avec rainures}
-L'idée finale, qui a été retenue dans le projet, est celle des rails avec un écartement séquentiel en combinaison avec les rainures en forme "V", le tout en une seule pièce. Ainsi, les parties de séparation des billes et de leur tri sont combinées, et la complexité de l'ensemble est réduite au maximum.
+%\subsubsection{Ecartement séquentiel avec rainures}
+%L'idée finale, qui a été retenue dans le projet, est celle des rails avec un écartement séquentiel en combinaison avec les rainures en forme "V", le tout en une seule pièce. Ainsi, les parties de séparation des billes et de leur tri sont combinées, et la complexité de l'ensemble est réduite au maximum.
 
 \section{Réservoir pour les billes triées}
 Les exigences pour le réservoir des billes triées sont clairs: Il nous fallait trois containers placés de sorte que toutes les billes de même diamètre tombent dans le réservoir prévu pour leur taille.
@@ -181,16 +186,7 @@ La construction des rails nous a donné un espace limité où les billes d'une t
 Les billes devaient ainsi être enlevées à la main du réservoir, ce qui peut poser des problèmes à cause de la petite taille. Nous avons alors décidé de faire des containers qui peuvent être enlevés pour récupérer les billes. 
 
 \subsection{Deuxième brouillon}
-La forme choisie pour les containers était un cube. Il nous fallait alors une rampe, afin de canaliser les billes dans les cubes.  Le dimensionnement des cubes se déroulait en prise en compte de la taille des billes. Dans le pire des cas, les 300 billes sont de la même taille : les cubes doivent alors être capables de contenir 300 billes de la taille respective. Pour simplifier la construction, les cubes ont tous la même taille sans respecter la taille des billes. Le volume des cubes est alors donné par:
-\begin{equation}
-    V = 7^3\ 300\ d \approx 7^3\ 300\ 0.75 = 77'175\ mm^3
-    \label{eq:volumereservoirfin}
-\end{equation}
-
-Où \(d = \frac{ \pi }{3\sqrt{2}} \approx 0.75\) est la densité volumique de l'empilement compact de billes. La longueur des arêtes intérieures du cube est alors donnée par: 
-\[l\textsubscript{int}=\sqrt[3]{77'175\ mm^3} \approx 42.5\ mm\]
-
-Avec une certaine tolérance, si les billes ne s'empilent pas de manière aussi compacte que possible, nous avons choisi une longueur d'arête extérieure de \({l\textsubscript{ext}=49~mm}\). Pour utiliser le place de la manière la plus efficace possible, nous avons inversé l'orientation de la rampe au milieu. Ainsi, les containers ne se trouvent pas tous sur une ligne, ce qui rend la machine plus compacte. 
+La forme choisie pour les containers était un cube. Il nous fallait alors une rampe, afin de canaliser les billes dans les cubes. Afin d'utiliser le place de la manière la plus efficace possible, nous avons inversé l'orientation de la rampe au milieu. Ainsi, les containers ne se trouvent pas tous sur une ligne, ce qui rend la machine plus compacte. 
 
 \begin{figure}
     \centering

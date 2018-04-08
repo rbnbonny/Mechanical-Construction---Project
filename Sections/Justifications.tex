@@ -14,10 +14,21 @@ Quelle que soit l'utilisation des billes triées, la flexibilité des containers
 qui entoure les pieds de chacun des containers. Le jeu pour enlever les containers est d'un millimètre en haut ainsi qu'en bas. C'est assez grand pour qu'ils ne se coincent pas et assez petit pour que la distance entre le haut du container et la prochaine pièce est de 4 mm, ce qui garantit que même les billes les plus petites trouvent leur chemin dans le bon réservoir, une fois tombées à travers les rails.
 
 \subsection{Usinage}
-Nous avons décidé d'augmenter le nombre de pièces afin de simplifier leur usinage. Parmi les pièces utilisées, il n'y a aucune pièce qui ne pouvait pas être usiné par des processus courants, certaines même sans assistance par ordinateur. La décomposition en pièces faciles à usiner est un avantage pour la production, mais pas pour l'assemblage de la machine. Si l'on voulait lancer la machine en production en grande série, il faudrait reconsidérer ce choix. En grand nombre, même des pièces plus complexes sont moins chères car les coûts de la configuration de l'usinage peuvent être répartis sur plusieurs pièces et forment donc une plus petite partie du prix de la pièce. Nous avons estimé que pour notre projet, le surcroît des dépenses se compense facilement par l'économie réalisée pendant l'usinage.\\
+Nous avons décidé d'augmenter le nombre de pièces afin de simplifier leur usinage. Parmi les pièces utilisées, il n'y a aucune pièce qui ne pouvait pas être usiné par des processus courants, certaines même sans assistance par ordinateur. La décomposition en pièces faciles à usiner est un avantage pour la production, mais pas pour l'assemblage de la machine. Si l'on voulait lancer la machine en production en grande série, il faudrait reconsidérer ce choix. En grand nombre, même des pièces plus complexes sont moins chères car les coûts de la configuration de l'usinage peuvent être répartis sur plusieurs pièces et forment donc une plus petite partie du prix de la pièce. Nous avons estimé que pour notre projet, le surcroît des dépenses se compense facilement par l'économie réalisée pendant l'usinage.
 
-En outre, nous avons fait intervenir des parois qu'il est possible d'acheter bon-marché. En découpant une paroi, nous obtenons une pièce qui s'utilise facilement comme partie d'un container. Comme déjà évoqué, nous avons rejeté l'idée d'ajuster la taille de chaque réservoir à la taille des billes correspondantes, pour augmenter la simplicité dans la production. La taille du rayon interne de la paroi se calcule comme suit: 
+En outre, nous avons fait intervenir des parois qu'il est possible d'acheter bon-marché. En découpant une paroi, nous obtenons une pièce qui s'utilise facilement comme partie d'un container. Comme déjà évoqué, nous avons rejeté l'idée d'ajuster la taille de chaque réservoir à la taille des billes correspondantes, pour augmenter la simplicité dans la production. 
 
-\begin{equation}r\textsubscript{int}\geq\sqrt{\frac{2\ V}{\pi\ l}}=\sqrt{\frac{2\ 77'175\ mm^3}{\pi\ 100\ mm}} \approx 22.2\ mm \label{eq:1}\end{equation}
+\subsection{Dimensionnement}
+Le dimensionnement des cubes se déroulait en prise en compte de la taille des billes. Dans le pire des cas, les 300 billes sont de la même taille : les réservoirs doivent alors être capables de contenir 300 billes de la taille respective. Pour simplifier la construction, les cubes ont tous la même taille sans respecter la taille des billes.
+Nous avons calculé le volume des réservoirs comme suit:
+\begin{equation}
+    V = 7^3\ 300\ d \approx 7^3\ 300\ 0.75 = 77'175\ mm^3
+    \label{eq:volumereservoirfin}
+\end{equation}
 
-Avec \(V=77'175\ mm^3\) calculé par la formule \ref{eq:volumereservoirfin} et \(l=100\ mm\) la longueur interne adaptée à la largeur des rails. En ajoutant un petit facteur de sécurité si les billes ne s'empilent pas de la manière la plus compacte possible, et en fixant l'épaisseur de la paroi de \(2\ mm \), nous avons obtenu un rayon externe de la paroi de \(r\textsubscript{ext}=25\ mm\).
+Où \(d = \frac{ \pi }{3\sqrt{2}} \approx 0.75\) est la densité volumique de l'empilement compact de billes.
+La taille du rayon interne de la paroi se calcule comme suit:
+
+\begin{equation}r\textsubscript{int}\geq\sqrt{\frac{2\ V}{\pi\ l}}=\sqrt{\frac{2\ 77'175\ mm^3}{\pi\ 90\ mm}} \approx 23.4\ mm \label{eq:rayonreservoirfin}\end{equation}
+
+Avec \(V=77'175\ mm^3\) calculé par la formule \ref{eq:volumereservoirfin} et \(l=90\ mm\) la longueur interne adaptée à la largeur des rails. En ajoutant un petit facteur de sécurité si les billes ne s'empilent pas de la manière la plus compacte possible, et en fixant l'épaisseur de la paroi de \(2\ mm \), nous avons obtenu un rayon externe de la paroi de \(r\textsubscript{ext}=27\ mm\). Pour que les billes ne font pas trop de bruit lors du choc au réservoir, nous avons prévu un feutre d'une épaisseur d'un millimètre. Le rayon interne mesure alors \(24\ mm \), ce qui respecte toujours la limite qu'on a calculé par la formule \ref{eq:rayonreservoirfin}.
