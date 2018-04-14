@@ -2,16 +2,141 @@
 
 \section{Réservoir pour les billes mixtes}
 
+\subsection{Dimensionnement}
+Les parois du réservoir initial mesurent 15 mm de hauteur: associées au fond en feutre, elles permettent d'éviter que des billes ne soient perdues si elles sont versées rapidement, tout en économisant de la matière par rapport à des parois sur-dimensionnées. 
+Ensuite, la pente de \ang{3} du fond du réservoir assure la descente des billes vers le distributeur, mais avec une vitesse modérée. De plus, les interactions des billes entre elles renforcent ce phénomène de ralentissement.
+Finalement, nous avons calculé la surface du réservoir comme suit:
+\[S = L \cdot l = \SI{99}{\milli\metre} \cdot \SI{165}{\milli\metre} = \SI{16335}{\milli\metre\squared}\]
+Où $L$ est la longueur du fond du réservoir, et $l$ la largeur.
+Ainsi, dans le pire des cas, soit \num{300} billes de \SI{7}{\milli\metre} de diamètre, ces dernières peuvent se répartir sur l'ensemble du fond du réservoir sans se superposer, si elles sont versées avec soin. En effet, la surface de répartition est donnée par:
+ Nous avons calculé le volume des réservoirs comme suit:
+\[S\textsubscript{max} = (\SI{7}{\milli\metre})^{2} \cdot \num{300} \cdot d \approx {\num{7}}^{3} \cdot 300 \cdot 0.9 = \SI{13230}{\milli\metre\squared}\]
+Où \(d = \frac{ \pi }{2\sqrt{3}} \approx \num{0.75}\) est la densité surfacique de l'arrangement compact de billes.
+Cela permet déjà de réduire le risque de problèmes au niveau du distributeur, même si d'autres précautions ont été prises plus loin pour exclure tout coincement.
+
+\subsection{Assemblage}
+Pour assembler le fond du réservoir avec les parois, nous avons choisi d'utiliser des goupilles, car des vis aurait exigé un perçage chanfreiné des parois du réservoir pour fixer une vis à tête conique, mais l'épaisseur de 6 mm ne permet pas: cela aurait affaibli le montage. A l'opposé, les goupilles peuvent être fixées grâce à un simple perçage, ce qui renforce l'assemblage.
+
 \section{Acheminement}
+\subsection{Choix final}
+Après l'évaluation de toutes les options notre choix fut le suivant:
+\begin{itemize}
+	\item \num{12} cylindres perforés de diamètre \SI{60}{\milli\metre} avec \num{10} trous arrondis de profondeur \SI{5.586}{\milli\metre} montés sur une barre
+%à discuter
+	\item une barre de diamètre \SI{8}{\milli\metre} avec un collet (diamètre \SI{6}{\milli\metre}) aux deux extrémités pour la fixer dans deux roulements à billes. À l'extrémité droite se trouve un taraudage (M4) pour fixer la pièce tenant la manivelle.
+	\item une grande fixation quasi-symétrique des deux cotés. Elle contiennent un évidement pour serrer les roulements à billes, des extrusions avec des taraudages pour fixer le cache et deux extrusions pour fixer le réservoir mixte et les rails. La seule différence entre la fixation du côté gauche et celui du côté droite est qu'à droite au centre de l'évidement se trouve un alésage passant à travers pour pouvoir visser la fixation de la manivelle à la barre 
+	\item une pièce pour tenir la manivelle qui consiste d'un cylindre avec un carré d'entraînement d'un côté et un filetage M4 de l'autre
+	\item une manivelle
+%à décider
+	\item un couvercle empêchant que les billes tombent dans les derniers \ang{30} de la rotation.
+\end{itemize}
+
+
+\subsubsection{Vitesse de tri}
+La surface de contact entre les cylindres perforés et le réservoir est de \SI{96}{\milli\metre}. Le diamètre moyen d'une bille est \SI{6}{\milli\metre}. Sur la surface de contact se trouveront alors
+
+\[\frac{\num{96}}{\num{6}} = \num{16}\]
+billes. À la surface de contact, il y a \num{8} trous à la fois à disposition qui seront donc tous remplis. Ainsi, lorsque la manivelle fait un tour entier, on pourra potentiellement acheminer 
+\[(\text{nombre de trous par cylindre}) \cdot (\text{nombre de cylindres}) = \num{10} \cdot \num{12} = \num{120}\]
+billes.
+On considère que jusqu'à ce qu'il ne reste que \num{50} billes dans le réservoir, la surface de contact sera remplie entièrement (pour avoir encore plus de certitude calculera avec une marge de sécurité de \num{0.9}).
+Alors si on commence dans une position de départ où les billes peuvent directement entrer et qu'on achemine \num{120} billes par tour on va
+% SIUNITX fixed until here (Robin)
+\[\frac{\theta}{\omega} = \frac{\frac{(250 \cdot 2)\pi}{120 \cdot 0.9}}{\frac{2\pi}{s}} = \frac{250}{108} \ s = 2.315 \ s \]
+acheminer 250 billes en \SI{2.315}{\s} avec une vitesse de rotation d'un tour par seconde.
+Les 50 dernières billes vont s'acheminer un peu plus lentement vu que la probabilité qu'ils tombent directement sur un trou diminue. Au lieu de faire un calcul exponentiel très compliqué on va partir de l'approximation qu'ils soient entraînes avec une certitude de \SI{50}{\percent}. Ce qui fait que
+\[\frac{\theta}{\omega} = \frac{\frac{(50 \cdot 2)\pi}{120 \cdot 0.5}}{\frac{2 \pi}{s}} = \frac{50}{60} \ s = 0.833 \ s\]
+0.833 secondes supplémentaires suffiront.
+En un total de 3.148~s toutes les billes auront alors passé le mécanisme d'acheminement.
+%tilda correct?
+\subsection{Acheminement}
+La première question qui se pose, c'est si les billes de diamètre 5 vont rester dans leurs cases pendant les premiers \ang{150} de leur tour (cf. figure en dessous). Car si la condition centripète n'est pas remplie constamment, la force centrifugale (dans le repère tournant) dirigerait les petits billes vers les arêtes des dents. Vu que les plus petites billes ont un radius (2.5) égal à la distance entre l'arête et le couvercle ceci pose un risque de coincement. Si nous considérons la figure ci-dessous, l'accélération centripète est donnée par:
+% figure manque
+\[ma_{c} = mg \cdot \sin\theta\]
+Pour une vitesse de rotation de \(\frac{2 \pi}{s}\) la condition centripète reste remplie pour tout angle supérieur à %\ang{?}
+\[\cancel{m} \cdot g \ sin\theta = \cancel{m} \frac{v^{2}}{R + r} = \cancel{m} \cdot \omega^{2} \ (R +r)\]
+\[sin \theta = \frac{\omega^{2} \ (R + r)}{g} = \frac{\frac{2 \pi}{s^{2}}\ (24.414mm + 2.5mm)}{10\frac{m}{s^{2}}} = \frac{\frac{4 \pi^{2}{s^{2}}} \ (26.914mm)}{10\frac{m}{s^{2}}} = \]
+%letzte gleichung ausrechnen
+Il reste à vérifier deux choses. Est-ce que le centre de masse de la bille restera dans la zone verte (voir figure en dessous) entre $\theta$ = voir en haut et $\theta$ = 0.
+%figure manque
+\subsubsection{Partie Pink 2}
+Vu que dans cette partie de la rotation la condition centripète n'est plus satisfaite, la bille va commencer à rouler hors de son logement. Pour faciliter les calculs on va considérer que la bille soit un point de masse qui se déplace sans friction en direction du couvercle pendant $\theta = $%voir en haut
+et $\theta = 0$. 
+Cette approximation assez forte est tout à fait valable. Car si je calcule l'accélération de la bille sans prendre la friction, la résistance au roulement et l'énergie convertie en énergie de rotation en compte je majore celle-ci. C'est-à-dire que si la bille ne sort pas de la zone verte dans le calcul aproximé, elle ne le ferait sûrement pas en réalité.\\
+On a alors l'équation pour la deuxième loi de Newton suivante (dans le repère tournant):
+\[ma = m \frac{\omega^{2}}{(R + r)}\]
+\[a = \omega \ (R + r) = \frac{4 \pi^{2}}{s^{2}} \ (26.914mm) = \]
+%à calculer et si nécessaire inclure friction
+Le déplacement $\Delta\theta$ entre $\theta =$ voir en haut et $\theta = 0$ va prendre
+\[2 \pi \estimates 1 s\]
+\[\therefore t = \frac{x \ s}{2 \pi} = \]
+%calcul manque
+et donc la bille se déplacera de (?) 
+\[s = \frac{1}{2} \ a \ t^{2} = ? \]
+.
+Ceci est inférieur à la distance 
+\[d = b - 2r = 8.086mm - 2 \times 2.5mm = 3.086mm\]
+où b est la distance entre le fond et le couvercle et on en soustrait 2r cas le centre de masse se trouve à distance r du fond et la bille n'a justement pas le droit de se trouver qu'à distance r du couvercle).
+
+\subsubsection{Partie Pink 3}
+La deuxième chose à vérifier est, si la bille maintenant en chute, tombera plus lentement que son logement et ainsi bloquera le mécanisme (si elle tombe plus vite ceci n'est pas problématique - vu que le mécanisme tourne dans la direction de sa chute ça se débloquerait soi-même). Ceci ne serait pas du tout problématique si la bille se trouvait en chute libre car
+\[v_{1} = v_{0} + a \ t > v_{0} , \Leftrightarrow a,t > 0\]
+Mais vu que dans cette partie la bille roulera le long du couvercle une partie de l'énergie potentielle sera transformée en énergie de rotation.
+À $\theta = 0$ on a:
+%image manque
+\[E_{0} = m\ g\ h + \frac{1}{2}\ m\ {v_{0}}^{2} \ \text{où} \ v_{0} = \omega_{cylindre}\ (R + r) = \frac{2\pi}{s}\ 26.914mm = 0.017 \frac{m}{s}\]
+À $\theta = \ang{-45}$ on a:
+\[E_{1} = \frac{1}{2}\ m\ v_{1}^{2} + \frac{1}{2}\ I\omega_{bille}\]
+\begin{equation}
+E_{0} = E_{1}
+\end{equation}
+\begin{equation}
+m\ g\ h + \frac{1}{2}\ m\ (\omega_{cylindre}\ (R + r))^{2} = \frac{1}{2}\ m\ v_{1}^{2} + \frac{1}{2}\ I\omega_{bille}
+\end{equation}
+\begin{equation}
+\cancel{m}\ g\ h + \frac{1}{2}\cancel{m}\ (\omega_{cylindre}\ (R + r))^{2} = \frac{1}{2}\cancel{m}\ v_{1}^{2} + \frac{1}{\cancel{2}}\ \frac{\cancel{2}}{5}\cancel{m}\ r^{2}\omega_{bille}
+\end{equation}
+\begin{equation}
+\cancel{m}\ g\ h + \frac{1}{2}\cancel{m}\ (\omega_{cylindre}\ (R + r))^{2} = \frac{1}{2}\cancel{m}\ v_{1}^{2} + \frac{1}{\cancel{2}}\ \frac{\cancel{2}}{5}\cancel{m}\ r^{2}\omega_{bille}
+\end{equation}
+\begin{equation}
+\omega_{bille} = \frac{v_{1}}{r}
+\end{equation}
+\begin{equation}
+g\ h + \frac{1}{2}\ (\omega_{cylindre}\ (R + r))^{2} = \frac{1}{2}\ v_{1}^{2} + \frac{1}{5}\ r^{2}\frac{v_{1}}{r}
+\end{equation}
+Par contre, ce calcul montre que $v_{1}$ sera supérieur à $v_{0}$ malgré l'énergie perdue en rotation. Ainsi, la preuve est fournie qu'il y aura pas de blocage pendant l'acheminement des billes. Dans le pire des cas où une "erschütterung" (?) ou un incident semblableme imprévisible aura comme conséquence qu'une bille se coince, le couvercle pourrait toujours s'enlever à l'aide d'un tournevis (?).
+\subsection{Consommation d'énergie et sollicitation}
+Une autre condition nécessaire au fonctionnement de notre mécanisme est s'il se laisse opérer avec un effort acceptable. L'acheminement fut conçu afin de minimiser les surfaces de contact avec les éléments statiques afin de minimiser la friction. En considérant le dessin ci-dessous on s'aperçoit que tout les moments de force en jeu se résument dans l'équation suivante:
+%dessin manque
+%formule manque
+où alfa (?) %formule 
+et où on considère le pire des cas ou on a toute les q * 12 cases remplis d'une bille avec diamètre 7 (donc contact avec le couvercle (?) et le fond de la dent (?) et ainsi deux fois une résistance au roulement).
+En résolvant ceci selon $F_{main}$ on obtient
+%formule fmain =
+Le travail fourni pas l'utilisateur est alors 
+% fmain * 2 pi
+.
+L'énergie investi par cycle suit ainsi du calcul
+%formule
+\subsection{Débloquage}
+Finalement il reste à évaluer s'il y a un empilement possible dans les "trous". Un tel empilement aurait comme conséquence que les billes soient très proche sur les rails et se freinent les uns  les autres où même que sa bloque l'acheminement.
+\subsubsection{Calculs}
+L'idée initiale fut de mettre le couvercle à une distance de 2.5 mm des cylindres perforés pour que s'il y a un empilement de deux billes de 5mm (ce qui représente le seul cas problématique) la bille de dessus soit heurté contre son centre de masse et ainsi repulsé.
+Mais considérons le dessin ci-dessous (à 35 degrés (?) de l'horizontale, c'est-à-dire 5 degrés (?) de rotation après que la bille soit soulevée)
+%Dessin manque
+Si on impose l'équilibre sur la bille extérieur
+%formules
+on s'aperçoit que \textit{a} devrait être inférieur à (?) pour que la bille reste en position. Par contre en pratique \textit{a} vaut (?) ce qui signifie que les billes ne s'empileront pas. Et vu que l'acheminement se fait en 3.148 secondes tout empilement devant à la surface de contact sera négligeable. (?)
 
 \section{Séparation et rails}
 
 \section{Réservoir pour les billes triées}
-La version finale du réservoir pour les billes triées était le troisième brouillon. Au contraire du premier brouillon, la version finale nous permet d'enlever les containers avec les billes triées séparément. Cela sans que la construction des pièces soit difficile, ce qui a exclu le deuxième brouillon. Voici ces deux raisons principales en plus de détail:
+La version finale du réservoir pour les billes triées était le troisième brouillon. Au contraire du premier brouillon, la version finale nous permet d'enlever les containers avec les billes triées séparément, et cela sans que la construction des pièces soit difficile, ce qui a exclu le deuxième brouillon. Voici ces deux raisons principales en plus de détail:
 
 \subsection{Containers flexibles}
-Quelle que soit l'utilisation des billes triées, la flexibilité des containers, qui permettent d'enlever toutes les billes triées de la même taille en même temps, est sans contredit utile. L'efficacité de la machine en service est donc bien meilleure que si l'on devait enlever toutes les billes à la main d'un container fixe. Le positionnement exact des containers est garanti par une plaque %{insérer lien dessin sol}
-qui entoure les pieds de chacun des containers. Le jeu pour enlever les containers est d'un millimètre en haut ainsi qu'en bas. C'est assez grand pour qu'ils ne se coincent pas et assez petit pour que la distance entre le haut du container et la prochaine pièce est de 4 mm, ce qui garantit que même les billes les plus petites trouvent leur chemin dans le bon réservoir, une fois tombées à travers les rails.
+Quelle que soit l'utilisation des billes triées, la flexibilité des containers, qui permettent d'enlever toutes les billes triées de la même taille en même temps, est bien utile lors de l'utilisation future de la machine. Son efficacité en service est donc bien meilleure que si l'on devait enlever toutes les billes à la main d'un container fixe. Le positionnement exact des containers est garanti par une plaque %{insérer lien dessin sol}
+qui entoure les pieds de chacun des containers. Le jeu pour enlever les containers est d'un millimètre en haut ainsi qu'en bas. C'est assez grand pour qu'ils ne se coincent pas, et assez petit pour que la distance entre le haut du container et la prochaine pièce soit de 4 mm, ce qui garantit que même les billes les plus petites trouvent leur chemin dans le bon réservoir, une fois tombées à travers les rails.
 
 \subsection{Usinage}
 Nous avons décidé d'augmenter le nombre de pièces afin de simplifier leur usinage. Parmi les pièces utilisées, il n'y a aucune pièce qui ne pouvait pas être usiné par des processus courants, certaines même sans assistance par ordinateur. La décomposition en pièces faciles à usiner est un avantage pour la production, mais pas pour l'assemblage de la machine. Si l'on voulait lancer la machine en production en grande série, il faudrait reconsidérer ce choix. En grand nombre, même des pièces plus complexes sont moins chères car les coûts de la configuration de l'usinage peuvent être répartis sur plusieurs pièces et forment donc une plus petite partie du prix de la pièce. Nous avons estimé que pour notre projet, le surcroît des dépenses se compense facilement par l'économie réalisée pendant l'usinage.
@@ -31,4 +156,4 @@ La taille du rayon interne de la paroi se calcule comme suit:
 
 \begin{equation}r\textsubscript{int}\geq\sqrt{\frac{2\ V}{\pi\ l}}=\sqrt{\frac{2\ 77'175\ mm^3}{\pi\ 90\ mm}} \approx 23.4\ mm \label{eq:rayonreservoirfin}\end{equation}
 
-Avec \(V=77'175\ mm^3\) calculé par la formule \ref{eq:volumereservoirfin} et \(l=90\ mm\) la longueur interne adaptée à la largeur des rails. En ajoutant un petit facteur de sécurité si les billes ne s'empilent pas de la manière la plus compacte possible, et en fixant l'épaisseur de la paroi de \(2\ mm \), nous avons obtenu un rayon externe de la paroi de \(r\textsubscript{ext}=27\ mm\). Pour que les billes ne font pas trop de bruit lors du choc au réservoir, nous avons prévu un feutre d'une épaisseur d'un millimètre. Le rayon interne mesure alors \(24\ mm \), ce qui respecte toujours la limite qu'on a calculé par la formule \ref{eq:rayonreservoirfin}.
+Avec \(V=77'175\ mm^3\) calculé par la formule \ref{eq:volumereservoirfin} et \(l=90\ mm\) la longueur interne adaptée à la largeur des rails. En ajoutant un petit facteur de sécurité si les billes ne s'empilent pas de la manière la plus compacte possible, et en fixant l'épaisseur de la paroi de \(2\ mm \), nous avons obtenu un rayon externe de la paroi de \(r\textsubscript{ext}=27\ mm\). Pour que les billes ne fassent pas trop de bruit lors du choc au réservoir, nous avons prévu un revêtement en feutre d'une épaisseur d'un millimètre. Le rayon interne mesure alors \(24\ mm \), ce qui respecte toujours la limite qu'on a calculé par la formule \ref{eq:rayonreservoirfin}.

@@ -8,12 +8,26 @@
 \usepackage{pdfpages} % Insérer PDFs externes comme pages
 \usepackage{hyphenat} % Coupure de mots avancée
 \usepackage{enumitem} % Énumération avancée
+\usepackage{siunitx}
+\usepackage{titlepic} % Figures sur page des titres
+\usepackage{cancel} % Biffure
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+%\usepackage{ulem} % Strikethrough & underline
+%\usepackage{authblk}
+
+\newcommand{\estimates}{\mathrel{\hat{=}}}
 
 %\title{Trieur de billes de roulement}
 %\title{Le Kampfpanzer 90}
-\title{Sylvie}
+\title{\huge Sylvie}
 \author{Robin Bonny \and Leon Locher \and Axel Sutter \and Nicola Windler}
+%\affil{EPFL}
 \date{Semestre de printemps 2018}
+\titlepic{  \includegraphics[width=\textwidth]{Graphics/SYLVIE.pdf}
+            \includegraphics[width=55mm]{Graphics/EPFL-Logo-GREY.eps}}
 
 \hyphenation{} % Insérer ici les mots que ne sont pas automatiquement coupés
 
