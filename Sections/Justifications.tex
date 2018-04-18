@@ -114,7 +114,8 @@ Chaque des six rainures unit les billes de deux roues et amène-les sur un rails
 La pente est donnée par une différence de \SI{2}{\milli\metre} sur la longueur totale de \SI{169}{\milli\metre} de la pièce, ce qui mène à un angle d'élévation de:
 \[\alpha_{\text{pente}} = \arctan\left(\frac{\SI{2}{\milli\metre}}{\SI{169}{\milli\metre}}\right) \approx \num{0.0118} \approx \sisetup{add-arc-degree-zero} \ang{;40;}\]
 
-\subsection{Vitesses angulaires}
+\subsection{Calculs}
+\subsubsection{Points de contact}
 Sur les rainures, la distance entre l'axe de rotation des billes et leur points de contact est donnée par la formule suivante, $d$ étant le diamètre de la bille:
 
 \[s_{\text{rainure}}(d) = \cos(\alpha_{\text{rainure}}) \cdot \frac{d}{2} = \frac{1}{\sqrt{\left(\frac{\SI{2}{\milli\metre}}{\SI{169}{\milli\metre}}\right)^2+1}} \cdot \frac{d}{2}\]
@@ -135,6 +136,42 @@ Sur les rails, la distance entre l'axe de rotation des billes et leur points de 
 \[s_{\text{rail}}(\SI{7}{\milli\metre},\SI{5.2}{\milli\metre}) = \sin\left(\arccos\left(\frac{\SI{5.2}{\milli\metre}/2}{\SI{6}{\milli\metre}/2}\right)\right) \cdot \frac{{\SI{7}{\milli\metre}}}{2} \approx \SI{2.34}{\milli\metre}\]
 
 \[s_{\text{rail}}(\SI{7}{\milli\metre},\SI{6.2}{\milli\metre}) = \sin\left(\arccos\left(\frac{\SI{6.2}{\milli\metre}/2}{\SI{7}{\milli\metre}/2}\right)\right) \cdot \frac{{\SI{7}{\milli\metre}}}{2} \approx \SI{1.62}{\milli\metre}\]
+
+\subsubsection{Vitesses}
+La condition pour que les billes roulent sur les rails sans glissement est donné par la formule \ref{eq:rolling_condition}.
+\begin{equation}
+    \tan(\alpha_{\text{pente}}) < \mu \frac{7}{2\sin{\beta}}
+    \label{eq:rolling_condition}
+\end{equation}
+
+\[\beta = \arcsin\left(\frac{s}{d}\right) = \arcsin\left(\frac{\SI{1.62}{\milli\metre}}{\SI{7}{\milli\metre}}\right) \approx \num{0.2335} \approx \ang{13.381}\]
+%gegenkathete / hypotenuse = sin
+
+\begin{itemize}[label={}, noitemsep]
+	\item $\alpha_{\text{pente}}$ \tabto{\tabtoX} Angle d'inclinaison de la pente
+	\item $\beta$ \tabto{\tabtoX} Angle de la force normale de la bille au point de contact
+	\item $\mu$ \tabto{\tabtoX} Coefficient de frottement entre les rails et les billes.
+	\item $s$ \tabto{\tabtoX} Distance entre l'axe de rotation et les point de contact
+\end{itemize}
+
+Pour confirmer que les billes roulent sur toute la pièce de séparation de tri sans glissement, les valeurs pour le plus petit angle $\beta$ sont insérées dans la formule \ref{eq:rolling_condition}. Ces valeurs sont $s_{\text{rail}}(\SI{7}{\milli\metre},\SI{6.2}{\milli\metre}) \approx \SI{1.62}{\milli\metre}$, $d = \SI{7}{\milli\metre}$ et $\mu \approx \num{0.6}$
+
+\[\tan(0.0118) < \num{0.6} \frac{7}{2\sin\left(\arcsin\left(\frac{\SI{1.62}{\milli\metre}}{\SI{7}{\milli\metre}}\right)\right)}\]
+\[\num{0.0118} < \num{9.074} \quad \checkmark\]
+
+Avec cette relation nous arriverons à la conclusion que, si les billes roulent, elles roulent sans glissement.
+
+La vitesse d'une bille avec deux points contact, comme nous les avons dans notre mécanisme, est donné par la formule \ref{eq:velocity_sphere}. Les symboles sont les mêmes comme dans la formule \ref{eq:rolling_condition}, en addition $f$, égale à $c_{rr}$, est le coefficient de résistance au roulement.
+
+\begin{equation}
+    \dot{v} = a = \frac{5\sin^{2}(\beta)}{2+5\sin^{2}(\beta)} g(\sin({\alpha_{\text{pente}}) - f\cos(\alpha_{\text{pente}})})
+    \label{eq:velocity_sphere}
+\end{equation}
+
+En insérant les valeurs d'avant et en plus $f = \num{0.001}$, le coefficient de résistance de roulement d'une bille d'acier sur une plaque d'acier, on reçoit finalement:
+
+\[\dot{v} = a = \frac{5\sin^{2}(0.2335)}{2+5\sin^{2}(0.2335)} \SI{9.81}{\metre\per\second\squared}(\sin(\num{0.0118}) - \num{0.001}\cos(\num{0.0118}))\]
+
 
 
 \section{Réservoir pour les billes triées}
