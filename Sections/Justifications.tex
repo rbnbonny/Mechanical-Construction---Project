@@ -3,175 +3,321 @@
 \section{Réservoir pour les billes mixtes}
 
 \subsection{Dimensionnement}
-Les parois du réservoir initial mesurent \SI{15}{\milli\metre} de hauteur: associées au fond en feutre, elles permettent d'éviter que des billes ne soient perdues si elles sont versées rapidement, tout en économisant de la matière par rapport à des parois sur-dimensionnées. 
+Les parois du réservoir initial mesurent \SI{15}{\milli\metre} de hauteur: elles permettent d'éviter que des billes ne soient perdues si elles sont versées avec soin, tout en économisant de la matière par rapport à des parois sur-dimensionnées. 
 Ensuite, la pente de \ang{3} du fond du réservoir assure la descente des billes vers le distributeur, mais avec une vitesse modérée. De plus, les interactions des billes entre elles renforcent ce phénomène de ralentissement.
 Finalement, nous avons calculé la surface du réservoir comme suit:
 \[S = L \cdot l = \SI{99}{\milli\metre} \cdot \SI{165}{\milli\metre} = \SI{16335}{\milli\metre\squared}\]
 Où $L$ est la longueur du fond du réservoir, et $l$ la largeur.
 Ainsi, dans le pire des cas, soit \num{300} billes de \SI{7}{\milli\metre} de diamètre, ces dernières peuvent se répartir sur l'ensemble du fond du réservoir sans se superposer, si elles sont versées avec soin. En effet, la surface de répartition est donnée par:
- Nous avons calculé le volume des réservoirs comme suit:
 \[S\textsubscript{max} = (\SI{7}{\milli\metre})^{2} \cdot \num{300} \cdot d \approx {\num{7}}^{3} \cdot 300 \cdot 0.9 = \SI{13230}{\milli\metre\squared}\]
 Où \(d = \frac{ \pi }{2\sqrt{3}} \approx \num{0.75}\) est la densité surfacique de l'arrangement compact de billes.
 Cela permet déjà de réduire le risque de problèmes au niveau du distributeur, même si d'autres précautions ont été prises plus loin pour exclure tout coincement.
 
 \subsection{Assemblage}
-Pour assembler le fond du réservoir avec les parois, nous avons choisi d'utiliser des goupilles, car des vis aurait exigé un perçage chanfreiné des parois du réservoir pour fixer une vis à tête conique, mais l'épaisseur de \SI{6}{\milli\metre} ne permet pas: cela aurait affaibli le montage. A l'opposé, les goupilles peuvent être fixées grâce à un simple perçage, ce qui renforce l'assemblage.
+Pour assembler le fond du réservoir avec les parois, nous avons choisi d'utiliser des goupilles, car des vis aurait exigé un perçage chanfreiné des parois du réservoir pour fixer une vis à tête conique, mais l'épaisseur de \SI{6}{\mm} ne permet pas: cela aurait affaibli le montage, et la tête de la vis aurait dépassé sous la paroi du bord du réservoir. A l'opposé, les goupilles peuvent être fixées grâce à un simple perçage, ce qui renforce l'assemblage.
 
 \section{Acheminement}
 \subsection{Choix final}
 Après l'évaluation de toutes les options notre choix fut le suivant:
 \begin{itemize}
-	\item \num{12} cylindres perforés de diamètre \SI{60}{\milli\metre} avec \num{10} trous arrondis de profondeur \SI{5.586}{\milli\metre} montés sur une barre
-%à discuter
-	\item une barre de diamètre \SI{8}{\milli\metre} avec un collet (diamètre \SI{6}{\milli\metre}) aux deux extrémités pour la fixer dans deux roulements à billes. À l'extrémité droite se trouve un taraudage (M4) pour fixer la pièce tenant la manivelle.
-	\item une grande fixation quasi-symétrique des deux cotés. Elle contiennent un évidement pour serrer les roulements à billes, des extrusions avec des taraudages pour fixer le cache et deux extrusions pour fixer le réservoir mixte et les rails. La seule différence entre la fixation du côté gauche et celui du côté droite est qu'à droite au centre de l'évidement se trouve un alésage passant à travers pour pouvoir visser la fixation de la manivelle à la barre 
-	\item une pièce pour tenir la manivelle qui consiste d'un cylindre avec un carré d'entraînement d'un côté et un filetage M4 de l'autre
-	\item une manivelle préfabriquée (Crank Handholes Straight Type QB-N) avec $K = 8$ et du coup une longeur totale (L) de \SI{49}{\milli\metre} voir un radius de rotation de \SI{32}{\milli\metre}.
-	\item un couvercle empêchant que les billes tombent dans les derniers \ang{30} de la rotation.
+	\item \num{12} cylindres perforés de diamètre \SI{60}{\milli\metre} et épaisseur \SI{8}{\milli\metre} avec \num{10} trous arrondis de profondeur \SI{5.586}{\milli\metre} (mesuré contre le rayon du cylindre) montés sur une barre.
+	\item Une barre de diamètre \SI{8}{\milli\metre} avec un collet (diamètre \SI{6}{\milli\metre}) aux deux extrémités pour la fixer dans deux roulements à billes. À l'extrémité droite se trouve un filetage (M6) pour fixer la manivelle.
+	\item Deux grandes fixations quasi-symétrique des deux cotés. Elle contiennent un évidement pour serrer les roulements à billes, des extrusions avec des taraudages pour fixer le cache et deux extrusions pour fixer le réservoir mixte et les rails. La seule différence entre la fixation du côté gauche et celle du côté droit est qu'à droite, au centre de l'évidement, se trouve un alésage traversant pour pouvoir visser la fixation de la manivelle à la barre.
+	\item Une manivelle préfabriquée de type disque avec un taraudage (M6) pour la fixer. Le disque a un diamètre de \SI{80}{\milli\metre} et un rayon de rotation  \SI{32}{\milli\metre}.
+	\item Un couvercle empêchant que les billes ne tombent dans les derniers \ang{45} de l'acheminement à partir de l'horizontale.
 \end{itemize}
 
 
 \subsubsection{Vitesse de tri}
-La surface de contact entre les cylindres perforés et le réservoir est de \SI{96}{\milli\metre}. Le diamètre moyen d'une bille est \SI{6}{\milli\metre}. Sur la surface de contact se trouveront alors
+La ligne de contact entre les cylindres perforés et le réservoir est de \SI{96}{\milli\metre}. Le diamètre moyen d'une bille est \SI{6}{\milli\metre}. Sur la ligne de contact se trouveront alors
 
-\[\frac{\num{96}}{\num{6}} = \num{16}\]
-billes. À la surface de contact, il y a \num{8} trous à la fois à disposition qui seront donc tous remplis. Ainsi, lorsque la manivelle fait un tour entier, on pourra potentiellement acheminer 
-\[(\text{nombre de trous par cylindre}) \cdot (\text{nombre de cylindres}) = \num{10} \cdot \num{12} = \num{120}\]
+\[\frac{\SI{96}{\milli\metre}}{\SI{6}{\milli\metre}} = \num{16}\]
+billes. À la surface de contact, il y a \num{8} trous à la fois à disposition qui seront donc tous remplis. De plus, lorsque la manivelle fait un tour entier, on pourra potentiellement acheminer 
+\[N = (\text{nombre de trous par cylindre}) \cdot (\text{nombre de cylindres}) = \num{10} \cdot \num{12} = \num{120}\]
 billes.
-On considère que jusqu'à ce qu'il ne reste que \num{50} billes dans le réservoir, la surface de contact sera remplie entièrement (pour avoir encore plus de certitude calculera avec une marge de sécurité de \num{0.9}).
-Alors si on commence dans une position de départ où les billes peuvent directement entrer et qu'on achemine \num{120} billes par tour on va
-
-% SIUNITX fixed until here (Robin)
-
-\[\frac{\theta}{\omega} = \frac{\frac{(250 \cdot 2)\pi}{120 \cdot 0.9}}{\frac{2\pi}{s}} = \frac{250}{108} \ s = 2.315 \ s \]
-acheminer 250 billes en \SI{2.315}{\s} avec une vitesse de rotation d'un tour par seconde.
-Les \num{50} dernières billes vont s'acheminer un peu plus lentement vu que la probabilité qu'ils tombent directement sur un trou diminue. Au lieu de faire un calcul exponentiel très compliqué on va partir de l'approximation qu'ils soient entraînes avec une certitude de \SI{50}{\percent}. Ce qui fait que
-\[\frac{\theta}{\omega} = \frac{\frac{(50 \cdot 2)\pi}{120 \cdot 0.5}}{\frac{2 \pi}{s}} = \frac{50}{60} \ s = 0.833 \ s\]
+On considère que jusqu'à ce qu'il ne reste plus que \num{50} billes dans le réservoir, la surface de contact sera remplie entièrement (pour avoir encore plus de certitude, nous calculerons avec une marge de sécurité de \num{0.9}).
+Alors si on commence dans une position de départ où les billes peuvent directement entrer et qu'on achemine \num{120} billes par tour on va acheminer \num{250} billes en \SI{2.315}{\s} avec une vitesse de rotation d'un tour par seconde.
+\[\frac{\theta}{\omega} = \frac{\frac{250 \cdot 2\pi}{120 \cdot 0.9}}{\frac{2\pi}{s}} = \frac{250}{108} \ s = \SI{2.315}{\s}\]
+Les \num{50} dernières billes vont s'acheminer un peu plus lentement, vu que la probabilité qu'elles tombent directement sur un trou diminue. Au lieu de faire un calcul exponentiel très compliqué, partons de l'approximation qu'elles soient entraînées avec une certitude de \SI{50}{\percent}. Ce qui fait que
+\[\frac{\theta}{\omega} = \frac{\frac{(50 \cdot 2)\pi}{120 \cdot 0.5}}{\frac{2 \pi}{s}} = \frac{50}{60} \ s = \SI{0.833}{\s}\]
 0.833 secondes supplémentaires suffiront.
 En un total de \SI{3.148}{\sec} toutes les billes auront alors passé le mécanisme d'acheminement.
 
+
 \subsection{Acheminement}
-La première question qui se pose, c'est si les billes de diamètre 5 vont rester dans leurs cases pendant les premiers \ang{150} de leur tour (cf. figure en dessous). Car si la condition centripète n'est pas remplie constamment, la force centrifugale (dans le repère tournant) dirigerait les petits billes vers les arêtes des dents. Donc il y aura un contact qui créerait une perte par résistance au roulement (vu que c'est des billes de roulement on va considérer qu'ils vont rouler sans glissement). Si nous considérons la figure ci-dessous, l'accélération centripète est donnée par:
-\[ma_{c} = mg \cdot \sin\theta\]
-Pour une vitesse de rotation de \(\frac{2 \pi}{s}\) la condition centripète reste remplie pour tout angle supérieur à %\ang{?}
-\[\cancel{m} \cdot g \ sin\theta = \cancel{m} \frac{v^{2}}{R + r} = \cancel{m} \cdot \omega^{2} \ (R +r)\]
-\[sin \theta = \frac{\omega^{2} \ (R + r)}{g} = \frac{\frac{2 \pi}{s^{2}}\ (24.414mm + 2.5mm)}{10\frac{m}{s^{2}}} = \frac{\frac{4 \pi^{2}}{s^{2}} \ (26.914mm)}{10\frac{m}{s^{2}}} = 0.0388\]
-\[\theta = \arcsin(0.0338) = \]
-Il reste à vérifier deux choses. Est-ce que le centre de masse de la bille restera dans la zone verte (voir figure en dessous) entre $\theta$ = voir en haut et $\theta$ = 0.
+La première question qui se pose, c'est si les billes de diamètre \SI{5}{\mm} vont rester dans leurs cases pendant les premiers \ang{150} de leur tour (cf. figure en dessous). En effet, si la condition centripète n'est pas remplie constamment, la force centrifuge (dans le repère tournant) dirigerait les petites billes vers les arrêtes des dents. Il y aura donc un contact qui créerait une perte par résistance au roulement (vu que c'est des billes de roulement, on va considérer qu'elles vont rouler sans glissement) et de la friction. Si nous considérons la figure ci-dessous, l'accélération centripète est donnée par:
 %figure manque
-\subsubsection{Partie Pink 2}
-Vu que dans cette partie de la rotation la condition centripète n'est plus satisfaite, la bille va commencer à rouler hors de son logement. Pour faciliter les calculs on va considérer que la bille soit un point de masse qui se déplace sans friction en direction du couvercle pendant $\theta = $%voir en haut
+\[ma_{c} = mg \cdot \sin\theta\]
+Pour une vitesse de rotation de \(\frac{2 \pi}{s}\), la condition centripète reste remplie pour tout angle supérieur à 
+\[\cancel{m} \cdot g \ sin\theta = \cancel{m} \frac{v^{2}}{R + r} = \cancel{m} \cdot \omega^{2} \ (R +r)\]
+\[sin \theta = \frac{\omega^{2} \ (R + r)}{g} = \frac{\frac{2 \pi}{s^{2}}\ (\SI{24.414}{\milli\metre} + \SI{2.5}{\milli\metre})}{10\frac{m}{s^{2}}} = \frac{\frac{4 \pi^{2}}{s^{2}} \ (\SI{26.914}{\milli\metre})}{10\frac{m}{s^{2}}} = 0.0388\]
+\[\theta = \arcsin(0.0338) = \ang{2.224}\]
+Il reste à faire des calculs pour deux cas particuliers. Est-ce que le centre de masse de la bille restera dans la zone verte (voir figure en dessous) entre $\theta = \ang{2.224}$ et $\theta = \ang{0}$? Et comment vont se comporter les billes dans les derniers \ang{45} de la rotation (entre $\theta = \ang{0}$ et $\theta = \ang{-45}$).
+\subsubsection{1er cas ($\theta = \ang{2.224}$
+jusqu'à $\theta = \ang{0}$)}
+Vu que dans cette partie de la rotation la condition centripète n'est plus satisfaite, la bille va commencer à rouler hors de son logement. Pour faciliter les calculs, considérons que la bille soit un point matériel qui se déplace sans friction en direction du couvercle entre $\theta = \ang{2.224}$
 et $\theta = 0$. 
-Cette approximation assez forte est tout à fait valable. Car si je calcule l'accélération de la bille sans prendre la friction, la résistance au roulement et l'énergie convertie en énergie de rotation en compte je majore celle-ci. C'est-à-dire que si la bille ne sort pas de la zone verte dans le calcul aproximé, elle ne le ferait sûrement pas en réalité.\\
-On a alors l'équation pour la deuxième loi de Newton suivante (dans le repère tournant):
+Cette approximation assez forte est tout à fait valable. En effet, si l'on calcule l'accélération de la bille sans prendre en compte la friction, la résistance au roulement et l'énergie convertie en énergie de rotation, je majore celle-ci. C'est-à-dire que si la bille ne sort pas de la zone verte dans le calcul approximé, elle ne le fera sûrement pas en réalité.\\
+
+On a alors l'équation suivante pour la deuxième loi de Newton (dans le repère tournant):
 \[ma = m \frac{\omega^{2}}{(R + r)}\]
-\[a = \omega \ (R + r) = \frac{4 \pi^{2}}{s^{2}} \ (26.914mm) = \]
-%à calculer et si nécessaire inclure friction
-Le déplacement $\Delta\theta$ entre $\theta =$ voir en haut et $\theta = 0$ va prendre
-\[2 \pi \estimates 1 s\]
-\[\rightarrow t = \frac{x \ s}{2 \pi} = \]
+
+\[a = \omega \ (R + r) = \frac{4 \pi^{2}}{s^{2}} \ (\SI{26.914}{\milli\metre}) = 1.063 \ \frac{m}{s^{2}}\]
+
+Le déplacement $\Delta\theta$ entre $\theta =\ang{2.224}$ et $\theta = 0$ va prendre
+\[2 \pi \estimates \SI{1}{\s}\]
+\[0.0185 \estimates t \]
+\[\rightarrow t = \SI{1}{\s} \frac{0.0185}{2 \pi} = \SI{0.00294}{\second}\]
+
 et donc la bille se déplacera de 
-\[s = \frac{1}{2} \ a \ t^{2} = ? \]
+
+\[s = \frac{1}{2} \ a \ t^{2} = \frac{1}{2} \ 1.063 \ \frac{m}{s^{2}} \ (\SI{0.00294}{\s})^{2} = \SI{0.00459}{\milli\metre}\]
+
 Ceci est inférieur à la distance 
-\[d = b - 2r = 8.086mm - 2 \times 2.5mm = 3.086mm\]
-où b est la distance entre le fond et le couvercle et on en soustrait 2r cas le centre de masse se trouve à distance r du fond et la bille n'a justement pas le droit de se trouver qu'à distance r du couvercle).
+\[d = b - 2r = \SI{8.086}{\milli\metre} - 2 \cdot \SI{2.5}{\milli\metre} = \SI{3.086}{\milli\metre}\]
 
-\subsubsection{Partie Pink 3}
-Dans les derniers \ang{45} la condition centripétale ne sera plus remplie. Ceci va créer un contact avec l'intérieur de la perforation et avec le couvercle. Mais vu que même pour les billes de radius \SI{5}{\milli\metre} le centre de masse ne pourra pas dépasser le rayon rouge (cf. image ci-dessous) cela ne bloquera pas le mécanisme.
+où $b$ est la distance entre le fond et le couvercle et on en soustrait $2r$, car le centre de masse se trouve à distance $r$ du fond et la bille n'a justement pas le droit de se trouver qu'à distance $r$ du couvercle.
+
+\subsubsection{2ème cas ($\theta = \ang{0}$ jusqu'à $\theta = \ang{-45}$}
+Dans les derniers \ang{45}, la condition centripète ne sera plus satisfaite. Ceci va créer un contact avec l'intérieur de la perforation et avec le couvercle. Mais vu que même pour les billes de rayon \SI{5}{\milli\metre}, le centre de masse ne pourra pas dépasser le rayon rouge (cf. image ci-dessous), cela ne bloquera pas le mécanisme.
 %insérer image
-Par contre ceci créera une perte d'énergie qui sera traité dans le paragraphe suivant.
+Par contre, cela créera une perte d'énergie qui sera traité dans le paragraphe suivant.
 
-\subsection{Consommation d'énergie et sollicitation}
-Pour garantir au consommateur une utilisation facile et un fonctionnement durable il reste à vérifier si notre mécanisme se laisse opérer avec un effort acceptable et s'il y a pas des frictions fortes qui vont créer des usures néfastes trop vite. L'acheminement fut conçu en minimisant les surfaces de contact avec les éléments statiques afin de minimiser la friction. En considérant le dessin ci-dessous on s'aperçoit que tout les moments de force en jeu se résument dans l'équation suivante:
+\subsection{Rendement et sollicitation}
+Pour garantir au consommateur une utilisation facile et un fonctionnement durable, il reste à vérifier si notre mécanisme se laisse opérer avec un effort acceptable et s'il y a pas de fortes frictions qui vont créer de l'usure néfaste trop rapidement. L'acheminement fut conçu en minimisant les surfaces de contact avec les éléments statiques afin de minimiser la friction. En considérant le dessin ci-dessous, on s'aperçoit que tous les moments de force qui imposeraient un équilibre (ou dans notre cas un $\omega$ constant) se résument dans l'équation suivante:
 %dessin manque
-%formule manque
-où alfa (?) %formule 
-et où on considère le pire des cas ou on a toute les \(10 \cdot 12\) cases remplis où pendant les derniers \ang{45} toutes les billes ont du contact avec le couvercle et l'arête de la dent et ainsi une résistance au roulement et de la friction. La résistance au roulement et le frottement dans le roulement à bille est négligée.
-En résolvant ceci selon $F_{main}$ on obtient
-%formule fmain =
-Le travail fourni pas l'utilisateur est alors 
-% fmain * 2 pi
-L'énergie investi par cycle suit ainsi du calcul
-%formule
+
+\[-F_{main} \cdot r_{manivelle} + \frac{18}{2} \ R_{ext} \ \nu \ m_{bille} \ \omega^{2} \ r_{bille}\] \[- 6 \ m_{bille} \ g \ R_{int} \ (\cos{\ang{141.8}} + \cos{\ang{123.8}} + \cos{\ang{105.8}} + \cos{\ang{87.8}} + \cos{\ang{69.8}}\]
+\begin{equation}
+    + \cos{\ang{51.8}} + \cos{\ang{33.8}} + \cos{\ang{15.8}} + \cos{\ang{-2.2}} + \cos{\ang{-20.2}} + \cos{\ang{-38.2}})
+\label{eq:moments_de_force_en_jeu}
+\end{equation}
+
+où \[R_{int} = r_{perforation} + r_{bille} = \SI{24.414}{\milli\metre} + \SI{3.5}{\milli\metre} = \SI{27.914}{\milli\metre}\]
+
+\[R_{ext} = r_{couvercle} - r_{bille} = \SI{32.5}{\milli\metre} - \SI{3.5}{\milli\metre} = \SI{29}{\milli\metre} \]
+
+\[m_{bille} = V \ \rho_{acier} = \frac{4}{3}\pi \ r^{3} \ rho_{acier} = \frac{4}{3} \pi (\SI{3.5}{\milli\metre})^{3} \ 0.0085 \frac{g}{mm^{3}} = \SI{1.410}{\g}\]
+
+et
+
+\[ \mu = \mu_{acier/alu} = 0.4\]
+
+si maintenant on reformule \ref{eq:moments_de_force_en_jeu} selon $F_{main}$
+
+\[F_{main} = 9 \ R_{ext} \ \nu \ m_{bille} \ \omega^{2} \ r_{bille} - 6 \cdot 3.904 \ m_{bille} \ g \ R_{int} = \]
+
+\[9 \cdot \SI{29}{\milli\metre} \cdot 0.4 \cdot \SI{1.410}{\g} \ \frac{4 \pi^{2}}{s^{2}} \ \SI{29}{\milli\metre} - 6 \cdot 3.904\cdot \SI{1.410}{\g} \ 10\frac{m}{s^{2}} \ \SI{27.914}{\milli\metre} =\]
+
+\begin{equation}
+    159.311 \frac{kg\cdot mm}{s^{2}} = \SI{0.159}{\N}
+    \label{eq:F_main}
+\end{equation}
+
+Ce calcul est de nouveau une majoration de la situation. Vu qu'il serait beaucoup hors de nos compétences de calculer la trace exacte que la bille fait pendant les derniers \ang{45} on l'approxime avec une bille qui est soudée à sa case et glisse sans rouler. Cette bille se trouve dans un repère tournant, du coup la force normale est égale a la force centrifuge. En plus on part du principe que toutes les cases sont replis avec les billes les plus lourdes et grandes (diamètre \SI{7}{\milli\metre}).
+
+\subsubsection{Rendement}
+L'inertie du cylindre rempli avec au maximum $6 \cdot 11$ billes de diamètre \SI{7}{\milli\metre} et donc
+    \[I_{tot} = I_{cylindre} + 6\cdot8 \ (\frac{2}{5} \ m_{bille} \ r_{billle}^{2} + m_{bille} \ R_{int}) + 6\cdot3 \ (\frac{2}{5} \ m_{bille} \ r_{billle}^{2} + m_{bille} \ R_{ext}) = \]
+\begin{equation}    
+    I_{cylindre} + 48\ (\frac{2}{5}\ m_{bille} \ (\SI{12.25}{\milli\metre})^{2} + m_{bille} \SI{28.5}{\milli\metre}) + 18 (\frac{2}{5} \ m_{bille} \ \SI{12.25}{\mm\squared} + m_{bille} \SI{29}{\milli\metre}) =
+\label{eq:total_inertia}
+\end{equation}
+
+Vu que le tri se fait en \SI{3.148}{\s} à un tour par seconde, 9 tours $F_{main}$ parcourt une distance totale de $t \cdot \omega \ R = \SI{3.148}{\s}\cdot \frac{2\pi}{s}\ \SI{32}{\milli\metre} = \SI{632.943}{\milli\metre}$
+À l'aide de \ref{eq:total_inertia} on peut alors calculer
+
+\[E_{investi} = E_{rot} + W_{main}\]
+\[E_{investi} = \frac{1}{2}I_{tot}\omega^{2} + F_{main} \ d = \]
+\[\frac{1}{2}I_{tot}(\frac{2\pi}{s})^{2} + \SI{0.159}{\N}\cdot \SI{0.632}{\metre}\]
+\[\]
+
+L'énergie qui ressort est la somme des énergies cinétiques des billes à~\ang{-45}
+
+\[E_{final} = 300 \frac{1}{2} m_{bille} \omega^{2} \ R_{ext}^{2} = 171.731 m_{bille} = (?)\]
+
+D'où le rendement
+
+\[\eta = \frac{E_{final}}{[E_{investi}} = \frac{?}{?} = (?)\]
+
 \subsection{Déblocage}
-Finalement il reste à évaluer s'il y a un empilement possible dans les empoches des cylindres. Un tel empilement aurait comme conséquence que les billes soient très proche sur les rails et se freinent les uns les autres où même que sa bloque l'acheminement.
-
-\subsubsection{Calculs}
-L'idée initiale fut de mettre le couvercle à une distance de 2.5 mm des cylindres perforés pour que s'il y a un empilement de deux billes de 5mm (ce qui représente le seul cas problématique) la bille de dessus soit heurté très proche de son centre de masse et ainsi repoussée.
-Mais considérons le dessin ci-dessous \ang{35} de l'horizontale, c'est-à-dire \ang{5} de rotation après que la bille soit soulevée)
-%Dessin manque
-Si on impose l'équilibre sur la bille extérieur
-%formules
-on s'aperçoit que \textit{a} devrait être inférieur à (?) pour que la bille reste en position. Par contre en pratique \textit{a} vaut (?) ce qui signifie que les billes ne s'empileront pas. Et vu que l'acheminement se fait en 3.148 secondes tout empilement devant à la surface de contact sera négligeable.
-
+Finalement, il reste à évaluer s'il y a un empilement possible dans les empoches des cylindres. Un tel empilement aurait comme conséquence que les billes soient très proches sur les rails et se freinent les unes les autres, où même bloquent l'acheminement. Par contre le dessin ci-dessous montre clairement que tout empilement à l'endroit de l'acheminement est absolument impossible.
+%dessin manque
 \section{Séparation et tri}
-Pour la séparation et le tri des billes nous avons choisi la parties avec les rails de tri en avant et les rainures de séparation en arrière, tout combiné dans une seule pièce.
+Pour la séparation et le tri des billes, nous avons choisi la partie avec les rails de tri en avant et les rainures de séparation en arrière, le tout combiné en une seule pièce.
 
 \subsection{Rainures}
-Chaque des six rainures unit les billes de deux roues et amène-les sur un rails pour le tri. Pour leur forme nous avons choisi un composé de deux triangles, chaque avec \SI{5}{\milli\metre} de haut et \SI{8}{\milli\metre} de large, égale à la largeur d'une roue. Ces triangles se trouvent arrangés de manière symétrique de chaque côté de la rainure centrale. Les rainures ne sont pas fraisés perpendiculaires à leur surface normale, mais parallèles à la pente de la pièce. L'angle d'inclinaison des rainures, dont nous avons besoin pour calculer les points de contact est donné par: \[\alpha_{\text{rainure}} = \arctan\left(\frac{\SI{5}{\milli\metre}}{\SI{8}{\milli\metre}}\right) \approx \num{0.5586} \approx \ang{32}\]
+Chacune des six rainures unit les billes de deux roues et les amène sur un rail pour le tri. Pour sa forme, nous avons choisi un composé de deux triangles, chaque avec \SI{5}{\milli\metre} de haut et \SI{8}{\milli\metre} de large, égale à la largeur d'une roue. Ces triangles se trouvent arrangés de manière symétrique de chaque côté de la rainure centrale. Les rainures ne sont pas fraisées perpendiculairement à leur surface normale, mais parallèlement à la pente de la pièce. L'angle d'inclinaison des rainures, dont nous avons besoin pour calculer les points de contact, est donné par:
+
+\[\alpha_{\text{rainure}} = \arctan\left(\frac{\SI{5}{\milli\metre}}{\SI{8}{\milli\metre}}\right) \approx \num{0.5586} \approx \ang{32}\]
 
 \subsection{Pente}
-La pente est donnée par une différence de \SI{2}{\milli\metre} sur la longueur totale de \SI{169}{\milli\metre} de la pièce, ce qui mène à un angle d'élévation de:
+La pente est donnée par une différence de \SI{2}{\milli\metre} sur la longueur totale de \SI{169}{\milli\metre} de la pièce, donc l'épaisseur projetée de la pièce est de \SI{6}{\mm} au début des rails et de \SI{4}{\mm} à la fin des rails. Avec les rainures ajoutées, la largeur au début est de \SI{9.375}{\mm}. Ces dimensions mènent à un angle d'élévation de:
+
 \[\alpha_{\text{pente}} = \arctan\left(\frac{\SI{2}{\milli\metre}}{\SI{169}{\milli\metre}}\right) \approx \num{0.0118} \approx \sisetup{add-arc-degree-zero} \ang{;40;}\]
 
+Cette valeur est utilisée pour plusieurs calculs dans la section \ref{calculs_tri}.
+
+\subsection{Ecartement}
+L'écartement de la pièce se fait sur deux parties. Dans la première, la distance entre le deux rails est de \SI{5.2}{\mm}, les billes de diamètre \SI{5}{\mm} tombent dans le réservoir au dessous et les plus grandes passent à la prochaine. Dans la deuxième section la distance entre le deux rails est de \SI{6.2}{\mm}, ici les billes de diamètre \SI{6}{\mm} tombent et les billes avec $d = \SI{7}{\mm}$ continuent à rouler jusqu'au bout de la pièce où elles tombent automatiquement dans le dernier container.
+
+Pour éviter les chocs sur les billes, la transition entre deux gammes des séparations se fait de manière graduelle et sur une distance de \SI{2}{\mm}. Le même usinage se trouve aussi à la liaison entre les rainures et les rails et au bout des rails.
+
 \subsection{Calculs}
+\label{calculs_tri}
 \subsubsection{Points de contact}
 Sur les rainures, la distance entre l'axe de rotation des billes et leur points de contact est donnée par la formule suivante, $d$ étant le diamètre de la bille:
 
 \[s_{\text{rainure}}(d) = \cos(\alpha_{\text{rainure}}) \cdot \frac{d}{2} = \frac{1}{\sqrt{\left(\frac{\SI{2}{\milli\metre}}{\SI{169}{\milli\metre}}\right)^2+1}} \cdot \frac{d}{2}\]
 
-\[s_{\text{rainure}}(\SI{5}{\milli\metre}) = \cos(0.5586) \cdot \frac{\SI{5}{\milli\metre}}{2} \approx \SI{2.12}{\milli\metre}\]
-
-\[s_{\text{rainure}}(\SI{6}{\milli\metre}) = \cos(0.5586) \cdot \frac{\SI{6}{\milli\metre}}{2} \approx \SI{2.54}{\milli\metre}\]
-
-\[s_{\text{rainure}}(\SI{7}{\milli\metre}) = \cos(0.5586) \cdot \frac{\SI{7}{\milli\metre}}{2} \approx \SI{2.97}{\milli\metre}\]
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        Diamètre    & \SI{5}{\mm} & \SI{6}{\mm} & \SI{7}{\mm} \\
+        \hline
+        Distance    & \textbf{\SI{2.12}{\mm}} & \textbf{\SI{2.54}{\mm}} & \textbf{\SI{2.97}{\mm}} \\
+        \hline
+    \end{tabular}
+    \caption{Valeurs calculés pour la distance verticale entre l'axe de rotation et les points de contact sur les rainures}
+    \label{tab:distance_rainures}
+\end{table}
 
 Sur les rails, la distance entre l'axe de rotation des billes et leur points de contact est donnée par la formule suivante, où $b$ est la distance entre les deux rails et $d$ le diamètre de la bille:
+
 %\[s_{\text{rail}}(d) = 1 - \cos^2\left(\arctan\left(\frac{d}{2}\right)\right)\]
 
-\[s_{\text{rail}}(d,b) = \sin\left(\arccos\left(\frac{b/2}{d/2}\right)\right) \cdot \frac{d}{2}\]
+\[s_{\text{rail}}(d,b) = \sin\left(\arccos\left(\frac{b}{d}\right)\right) \cdot \frac{d}{2} = \sqrt{1-\left(\frac{b}{d}\right)^{2}} \cdot \frac{d}{2}\]
 
-\[s_{\text{rail}}(\SI{6}{\milli\metre},\SI{5.2}{\milli\metre}) = \sin\left(\arccos\left(\frac{\SI{5.2}{\milli\metre}/2}{\SI{6}{\milli\metre}/2}\right)\right) \cdot \frac{{\SI{6}{\milli\metre}}}{2} \approx \SI{1.50}{\milli\metre}\]
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+         & \SI{7}{\mm} & \SI{6}{\mm} & \SI{5}{\mm} \\
+        \hline
+        Rail \SI{5.2}{\mm}& \textbf{\SI{2.34}{\mm}} & \textbf{\SI{1.50}{\mm}} & - \\
+        \hline
+        Rail \SI{6.2}{\mm}& \textbf{\SI{1.62}{\mm}} & - & - \\
+        \hline
+    \end{tabular}
+    \caption{Valeurs calculés pour la distance verticale entre l'axe de rotation et les points de contact sur les rails. Les billes de diamètre \SI{5}{\mm} n'ont pas de valeurs, car elles tombent directement et ne jamais roulent sur les rails.}
+    \label{tab:distance_rails}
+\end{table}
 
-\[s_{\text{rail}}(\SI{7}{\milli\metre},\SI{5.2}{\milli\metre}) = \sin\left(\arccos\left(\frac{\SI{5.2}{\milli\metre}/2}{\SI{6}{\milli\metre}/2}\right)\right) \cdot \frac{{\SI{7}{\milli\metre}}}{2} \approx \SI{2.34}{\milli\metre}\]
+\subsubsection{Equations de mouvement}
 
-\[s_{\text{rail}}(\SI{7}{\milli\metre},\SI{6.2}{\milli\metre}) = \sin\left(\arccos\left(\frac{\SI{6.2}{\milli\metre}/2}{\SI{7}{\milli\metre}/2}\right)\right) \cdot \frac{{\SI{7}{\milli\metre}}}{2} \approx \SI{1.62}{\milli\metre}\]
-
-\subsubsection{Vitesses}
+\paragraph{Condition de roulement sans glissement}
 La condition pour que les billes roulent sur les rails sans glissement est donné par la formule \ref{eq:rolling_condition}.
 \begin{equation}
     \tan(\alpha_{\text{pente}}) < \mu \frac{7}{2\sin{\beta}}
     \label{eq:rolling_condition}
 \end{equation}
 
-\[\beta = \arcsin\left(\frac{s}{d}\right) = \arcsin\left(\frac{\SI{1.62}{\milli\metre}}{\SI{7}{\milli\metre}}\right) \approx \num{0.2335} \approx \ang{13.381}\]
+%% CORRECT FORMULAS FROM HERE ON %%
+
+\[\beta = \arcsin\left(\frac{s}{d/2}\right)\]
+%= \arcsin\left(\frac{\SI{1.62}{\milli\metre}}{\SI{7}{\milli\metre}/2}\right)
+%  \approx \num{0.2335} \approx \ang{13.381}
 %gegenkathete / hypotenuse = sin
 
 \begin{itemize}[label={}, noitemsep]
 	\item $\alpha_{\text{pente}}$ \tabto{\tabtoX} Angle d'inclinaison de la pente
 	\item $\beta$ \tabto{\tabtoX} Angle de la force normale de la bille au point de contact
 	\item $\mu$ \tabto{\tabtoX} Coefficient de frottement entre les rails et les billes.
-	\item $s$ \tabto{\tabtoX} Distance entre l'axe de rotation et les point de contact
+	\item $s$ \tabto{\tabtoX} Distance entre l'axe de rotation et les points de contact
 \end{itemize}
 
-Pour confirmer que les billes roulent sur toute la pièce de séparation de tri sans glissement, les valeurs pour le plus petit angle $\beta$ sont insérées dans la formule \ref{eq:rolling_condition}. Ces valeurs sont $s_{\text{rail}}(\SI{7}{\milli\metre},\SI{6.2}{\milli\metre}) \approx \SI{1.62}{\milli\metre}$, $d = \SI{7}{\milli\metre}$ et $\mu \approx \num{0.6}$
+En insérant les différentes valeurs pour $s$ et les diamètres $d$ correspondants, on obtient les valeurs notées dans le tableau \ref{tab:beta_sphere}.
 
-\[\tan(0.0118) < \num{0.6} \frac{7}{2\sin\left(\arcsin\left(\frac{\SI{1.62}{\milli\metre}}{\SI{7}{\milli\metre}}\right)\right)}\]
-\[\num{0.0118} < \num{9.074} \quad \checkmark\]
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+         & \SI{7}{\mm} & \SI{6}{\mm} & \SI{5}{\mm} \\
+        \hline
+        Rainures & \textbf{\ang{57.99}} & \textbf{\ang{57.99}} & \textbf{\ang{57.99}} \\
+        \hline
+        Rail \SI{5.2}{\mm}& \textbf{\ang{42.02}} & \textbf{\ang{29.93}} & - \\
+        \hline
+        Rail \SI{6.2}{\mm}& \textbf{\ang{27.66}} & - & - \\
+        \hline
+    \end{tabular}
+    \caption{Valeurs de l'angle $\beta$ en dépendance de $s$ et $d$}
+    \label{tab:beta_sphere}
+\end{table}
+
+Pour confirmer que les billes roulent sur toute la pièce de séparation de tri sans glissement, la valeur du plus petit angle $\beta$ du tableau \ref{tab:beta_sphere} est inséré dans la formule \ref{eq:rolling_condition}. Celui est l'angle de la bille de $d = \SI{7}{\mm}$ sur le rail avec écartement $s = \SI{6.2}{\mm}$. $\mu$ a la même valeur comme précédemment, égal à \num{0.4}.
+
+\[\sisetup{add-arc-degree-zero} \tan(\ang{;40;}) < \num{0.4} \cdot \frac{7}{2\sin(\ang{27.66})}\]
+
+\[\num{0.0118} < \num{3.0157} \quad \checkmark\]
 
 Avec cette relation nous arriverons à la conclusion que, si les billes roulent, elles roulent sans glissement.
 
-La vitesse d'une bille avec deux points contact, comme nous les avons dans notre mécanisme, est donné par la formule \ref{eq:velocity_sphere}. Les symboles sont les mêmes comme dans la formule \ref{eq:rolling_condition}, en addition $f$, égale à $c_{rr}$, est le coefficient de résistance au roulement.
+\paragraph{Accélération}
+La vitesse d'une bille, avec deux points contact, comme nous les avons dans notre mécanisme, est donné par la formule \ref{eq:acceleration_sphere}. Les symboles sont les mêmes comme dans la formule \ref{eq:rolling_condition}, en addition $f$, égal à $c_{rr}$, est le coefficient de résistance au roulement.
 
 \begin{equation}
     \dot{v} = a = \frac{5\sin^{2}(\beta)}{2+5\sin^{2}(\beta)} g(\sin({\alpha_{\text{pente}}) - f\cos(\alpha_{\text{pente}})})
-    \label{eq:velocity_sphere}
+    \label{eq:acceleration_sphere}
 \end{equation}
 
-En insérant les valeurs d'avant et en plus $f = \num{0.001}$, le coefficient de résistance de roulement d'une bille d'acier sur une plaque d'acier, on reçoit finalement:
+En insérant les valeurs d'avant, $\beta$ maximal et minimal, et en plus $f = \num{0.001}$, le coefficient de résistance de roulement d'une bille d'acier sur une plaque d'%acier ou aluminum
+, nous obtenons finalement une valeur pour l'accélération minimale et une valeur pour l'accélération maximale d'une bille sur la pièce de séparation et tri.
 
-\[\dot{v} = a = \frac{5\sin^{2}(0.2335)}{2+5\sin^{2}(0.2335)} \SI{9.81}{\metre\per\second\squared}(\sin(\num{0.0118}) - \num{0.001}\cos(\num{0.0118}))\]
+\[\sisetup{add-arc-degree-zero}
+a\textsubscript{max} = \frac{5\sin^{2}(\ang{57.99})}{2+5\sin^{2}(\ang{57.99})} \SI{9.81}{\metre\per\second\squared}(\sin(\ang{;40;}) - \num{0.001}\cos(\ang{;40;})) = \SI{0.0683}{\m\per\s\squared}\]
 
+\[\sisetup{add-arc-degree-zero}
+a\textsubscript{min} = \frac{5\sin^{2}(\ang{27.66})}{2+5\sin^{2}(\ang{27.66})} \SI{9.81}{\metre\per\second\squared}(\sin(\ang{;40;}) - \num{0.001}\cos(\ang{;40;})) = \SI{0.0372}{\m\per\s\squared}\]
+
+
+\paragraph{Vitesses}
+% Par intégration de la formule \ref{eq:acceleration_sphere}, l'équation de vitesse peut être calculée.
+
+% \begin{equation}
+%     v = \int \dot{v} \ dt = \frac{-5(\sin({\alpha_{\text{pente}}) - f\cos(\alpha_{\text{pente}})})g \cdot t}{7} + v_{0}
+%     \label{eq:velocity_sphere_alg}
+% \end{equation}
+
+Pour déterminer les expression pour la vitesse finale et le temps nécessaire pour traverser la pièce, il faut premièrement calculer la vitesse initiale ($v_{0}$) quand les billes arrivent sur la pièce. La vitesse finale des billes quand elles quittent le distributeur est égale à la vitesse initiale au début du séparateur. Le rayon $r$ est la distance entre le centre de masse de la plus grande bille et l'axe de rotation de la roue. En assumant un tour par seconde de la manivelle ($\omega = 2\pi$), $v_{0}$ est calculé comme suit:
+
+\begin{equation}
+    v_{0} = \omega r = \SI{2\pi}{\per\second} \cdot \SI{29}{\mm} \approx \SI{182.212}{\mm\per\s} \approx \SI{0.182}{\m\per\s}
+    \label{eq:initialV_rails}
+\end{equation}
+
+\[r = \SI{32.5}{\mm} - \left(\frac{\SI{7}{\mm}}{2}\right) = \SI{29}{\mm}\]
+
+Avec tous ces valeurs, nous pouvons finalement calculer les vitesses des billes sur différentes parties de la pièce, leur vitesses, quand elles quittent la pièce et tombent dans leur réservoir final correspondant et les temps nécessaire pour chaque des ces valeurs.
+
+% La vitesse finale d'une bille au bout de la pièce se calcule en insérant la valeur de la formule \ref{eq:initialV_rails} dans \ref{eq:velocity_sphere_alg}.
+
+% \[v = \int \dot{v} \ dt = \frac{-5(\sin({\alpha_{\text{pente}}) f\cos(\alpha_{\text{pente}})})g \cdot t}{7} + v_{0}\]
+
+% Le temps $t$, dont une bille a besoin pour traverser la pièce est calculée en \ref{eq:rolling_time}. En avant, la distance parcourue de la bille sur la pièce est calculée.
+
+% \[l = \sqrt{\text{hauteur}^2 + \text{longueur}^2} = \sqrt{(\SI{2}{\mm})^2 + (\SI{169}{\mm})^2} \approx \SI{169.012}{\mm}\]
+
+% Temps nécessaire sans vélocité initiale:
+% \begin{equation}
+%     t = \sqrt{\frac{2l}{a}} \approx \sqrt{\frac{2 \cdot \SI{169.012}{\mm}}{\SI{0.0125}{\metre\per\second\squared}}} \approx \SI{5189.83}{\s}
+%     \label{eq:rolling_time}
+% \end{equation}
+
+% La vélocité d'une bille au bout des rails se calcule en insérant la vélocité initiale de \ref{eq:initialV_rails}, l'accélération de \ref{eq:acceleration_sphere} et la longueur de la pente de la pièce de \ref{eq:partlength}, dans la formule \ref{eq:final_velocity_1}.
+
+% \begin{equation}
+%     l = \sqrt{\text{hauteur}^2 + \text{longueur}^2} = \sqrt{(\SI{2}{\mm})^2 + (\SI{169}{\mm})^2} \approx \SI{169.012}{\mm}
+%     \label{eq:partlength}
+% \end{equation}
+
+% \begin{equation}
+%     v=\sqrt{2ad +{v_{0}}^{2}}
+%     \label{eq:final_velocity_1}
+% \end{equation}
+
+% \[\approx \sqrt{(2 \cdot {\SI{0.0125}{\m\per\second\squared}} \cdot \SI{0.169}{\m}) + {(\SI{0.182}{\m\per\s}})^{2}} \approx \SI{1.834}{\m\per\s}\]
 
 
 \section{Réservoir pour les billes triées}
@@ -179,7 +325,7 @@ La version finale du réservoir pour les billes triées était le troisième bro
 
 \subsection{Containers flexibles}
 Quelle que soit l'utilisation des billes triées, la flexibilité des containers, qui permettent d'enlever toutes les billes triées de la même taille en même temps, est bien utile lors de l'utilisation future de la machine. Son efficacité en service est donc bien meilleure que si l'on devait enlever toutes les billes à la main d'un container fixe. Le positionnement exact des containers est garanti par une plaque %{insérer lien dessin sol}
-qui entoure les pieds de chacun des containers. Le jeu pour enlever les containers est d'un millimètre en haut ainsi qu'en bas. C'est assez grand pour qu'ils ne se coincent pas, et assez petit pour que la distance entre le haut du container et la prochaine pièce soit de 4 mm, ce qui garantit que même les billes les plus petites trouvent leur chemin dans le bon réservoir, une fois tombées à travers les rails.
+qui entoure les pieds de chacun des containers. Le jeu pour enlever les containers est d'un millimètre en haut ainsi qu'en bas. C'est assez grand pour qu'ils ne se coincent pas, et assez petit pour que la distance entre le haut du container et la prochaine pièce soit de \SI{4}{\mm}, ce qui garantit que même les billes les plus petites trouvent leur chemin dans le bon réservoir, une fois tombées à travers les rails.
 
 \subsection{Usinage}
 Nous avons décidé d'augmenter le nombre de pièces afin de simplifier leur usinage. Parmi les pièces utilisées, il n'y a aucune pièce qui ne pouvait pas être usiné par des processus courants, certaines même sans assistance par ordinateur. La décomposition en pièces faciles à usiner est un avantage pour la production, mais pas pour l'assemblage de la machine. Si l'on voulait lancer la machine en production en grande série, il faudrait reconsidérer ce choix. En grand nombre, même des pièces plus complexes sont moins chères car les coûts de la configuration de l'usinage peuvent être répartis sur plusieurs pièces et forment donc une plus petite partie du prix de la pièce. Nous avons estimé que pour notre projet, le surcroît des dépenses se compense facilement par l'économie réalisée pendant l'usinage.
@@ -187,16 +333,16 @@ Nous avons décidé d'augmenter le nombre de pièces afin de simplifier leur usi
 En outre, nous avons fait intervenir des parois qu'il est possible d'acheter bon-marché. En découpant une paroi, nous obtenons une pièce qui s'utilise facilement comme partie d'un container. Comme déjà évoqué, nous avons rejeté l'idée d'ajuster la taille de chaque réservoir à la taille des billes correspondantes, pour augmenter la simplicité dans la production. 
 
 \subsection{Dimensionnement}
-Le dimensionnement des cubes se déroulait en prise en compte de la taille des billes. Dans le pire des cas, les 300 billes sont de la même taille : les réservoirs doivent alors être capables de contenir 300 billes de la taille respective. Pour simplifier la construction, les cubes ont tous la même taille sans respecter la taille des billes.
+Le dimensionnement des cubes se déroulait en prise en compte de la taille des billes. Dans le pire des cas, les \num{300} billes sont de la même taille : les réservoirs doivent alors être capables de contenir \num{300} billes de la taille respective. Pour simplifier la construction, les cubes ont tous la même taille sans respecter la taille des billes.
 Nous avons calculé le volume des réservoirs comme suit:
 \begin{equation}
-    V = 7^3\ 300\ d \approx 7^3\ 300\ 0.75 = 77'175\ mm^3
+    V = (\SI{7}{\mm})^3 \cdot \num{300} \cdot d \approx 7^3 \cdot \num{300} \cdot \num{0.75} = \SI{77175}{\mm\cubed}
     \label{eq:volumereservoirfin}
 \end{equation}
 
-Où \(d = \frac{ \pi }{3\sqrt{2}} \approx 0.75\) est la densité volumique de l'empilement compact de billes.
+Où \(d = \frac{\pi}{3\sqrt{2}} \approx \num{0.75}\) est la densité volumique de l'empilement compact de billes.
 La taille du rayon interne de la paroi se calcule comme suit:
 
-\begin{equation}r\textsubscript{int}\geq\sqrt{\frac{2\ V}{\pi\ l}}=\sqrt{\frac{2\ 77'175\ mm^3}{\pi\ 90\ mm}} \approx 23.4\ mm \label{eq:rayonreservoirfin}\end{equation}
+\begin{equation}r\textsubscript{int} \geq \sqrt{\frac{2\ V}{\pi\ l}}=\sqrt{\frac{2 \cdot \SI{77175}{\mm\cubed}}{\pi\ \SI{90}{\mm}}} \approx \SI{23.4}{\mm} \label{eq:rayonreservoirfin}\end{equation}
 
-Avec \(V=77'175\ mm^3\) calculé par la formule \ref{eq:volumereservoirfin} et \(l=90\ mm\) la longueur interne adaptée à la largeur des rails. En ajoutant un petit facteur de sécurité si les billes ne s'empilent pas de la manière la plus compacte possible, et en fixant l'épaisseur de la paroi de \(2\ mm \), nous avons obtenu un rayon externe de la paroi de \(r\textsubscript{ext}=27\ mm\). Pour que les billes ne fassent pas trop de bruit lors du choc au réservoir, nous avons prévu un revêtement en feutre d'une épaisseur d'un millimètre. Le rayon interne mesure alors \(24\ mm \), ce qui respecte toujours la limite qu'on a calculé par la formule \ref{eq:rayonreservoirfin}.
+Avec $V= \SI{77175}{\mm\cubed}$ calculé par la formule \ref{eq:volumereservoirfin} et $l=\SI{90}{\mm}$ la longueur interne adaptée à la largeur des rails. En ajoutant un petit facteur de sécurité si les billes ne s'empilent pas de la manière la plus compacte possible, et en fixant l'épaisseur de la paroi de \SI{2}{\mm}, nous avons obtenu un rayon externe de la paroi de $r\textsubscript{ext}=\SI{27}{\mm}$. Pour que les billes ne fassent pas trop de bruit lors du choc au réservoir, nous avons prévu un revêtement en feutre d'une épaisseur d'un millimètre. Le rayon interne mesure alors \SI{24}{\mm}, ce qui respecte toujours la limite qu'on a calculé par la formule \ref{eq:rayonreservoirfin}.
