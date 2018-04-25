@@ -200,22 +200,19 @@ Sur les rails, la distance entre l'axe de rotation des billes et leur points de 
         Rail \SI{6.2}{\mm}& \textbf{\SI{1.62}{\mm}} & - & - \\
         \hline
     \end{tabular}
-    \caption{Valeurs calculés pour la distance verticale entre l'axe de rotation et les points de contact sur les rails. Les billes de diamètre \SI{5}{\mm} n'ont pas de valeurs, car elles tombent directement et ne jamais roulent sur les rails.}
+    \caption{Valeurs calculés pour la distance verticale entre l'axe de rotation et les points de contact sur les rails. Les billes de diamètre \SI{5}{\mm} n'ont pas de valeurs, car elles tombent directement et ne roulent jamais sur les rails.}
     \label{tab:distance_rails}
 \end{table}
 
-\subsubsection{Equations de mouvement}
-
-\paragraph{Condition de roulement sans glissement}
+\subsubsection{Condition de roulement sans glissement}
 La condition pour que les billes roulent sur les rails sans glissement est donné par la formule \ref{eq:rolling_condition}.
 \begin{equation}
     \tan(\alpha_{\text{pente}}) < \mu \frac{7}{2\sin{\beta}}
     \label{eq:rolling_condition}
 \end{equation}
 
-%% CORRECT FORMULAS FROM HERE ON %%
-
 \[\beta = \arcsin\left(\frac{s}{d/2}\right)\]
+
 %= \arcsin\left(\frac{\SI{1.62}{\milli\metre}}{\SI{7}{\milli\metre}/2}\right)
 %  \approx \num{0.2335} \approx \ang{13.381}
 %gegenkathete / hypotenuse = sin
@@ -254,7 +251,7 @@ Pour confirmer que les billes roulent sur toute la pièce de séparation de tri 
 
 Avec cette relation nous arriverons à la conclusion que, si les billes roulent, elles roulent sans glissement.
 
-\paragraph{Accélération}
+\subsubsection{Accélération}
 La vitesse d'une bille, avec deux points contact, comme nous les avons dans notre mécanisme, est donné par la formule \ref{eq:acceleration_sphere}. Les symboles sont les mêmes comme dans la formule \ref{eq:rolling_condition}, en addition $f$, égal à $c_{rr}$, est le coefficient de résistance au roulement.
 
 \begin{equation}
@@ -263,16 +260,27 @@ La vitesse d'une bille, avec deux points contact, comme nous les avons dans notr
 \end{equation}
 
 En insérant les valeurs d'avant, $\beta$ maximal et minimal, et en plus $f = \num{0.001}$, le coefficient de résistance de roulement d'une bille d'acier sur une plaque d'%acier ou aluminum
-, nous obtenons finalement une valeur pour l'accélération minimale et une valeur pour l'accélération maximale d'une bille sur la pièce de séparation et tri.
+, nous obtenons finalement des valeurs pour les accélérations différentes des billes sur la pièce de séparation et tri. Toutes les accélérations sont notés dans le tableau \ref{tab:accelerations_sphere}.
 
-\[\sisetup{add-arc-degree-zero}
-a\textsubscript{max} = \frac{5\sin^{2}(\ang{57.99})}{2+5\sin^{2}(\ang{57.99})} \SI{9.81}{\metre\per\second\squared}(\sin(\ang{;40;}) - \num{0.001}\cos(\ang{;40;})) = \SI{0.0683}{\m\per\s\squared}\]
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+         & \SI{7}{\mm} & \SI{6}{\mm} & \SI{5}{\mm} \\
+        \hline
+        Rainures & \textbf{\SI{0.0683}{\m\per\s\squared}} & \textbf{\SI{0.0683}{\m\per\s\squared}} & \textbf{\SI{0.0683}{\m\per\s\squared}} \\
+        \hline
+        Rail \SI{5.2}{\mm}& \textbf{\SI{0.0562}{\m\per\s\squared}} & \textbf{\SI{0.0408}{\m\per\s\squared}} & - \\
+        \hline
+        Rail \SI{6.2}{\mm}& \textbf{\SI{0.0372}{\m\per\s\squared}} & - & - \\
+        \hline
+    \end{tabular}
+    \caption{Valeurs des accélérations ($a$) en dépendance de $\beta$}
+    \label{tab:accelerations_sphere}
+\end{table}
 
-\[\sisetup{add-arc-degree-zero}
-a\textsubscript{min} = \frac{5\sin^{2}(\ang{27.66})}{2+5\sin^{2}(\ang{27.66})} \SI{9.81}{\metre\per\second\squared}(\sin(\ang{;40;}) - \num{0.001}\cos(\ang{;40;})) = \SI{0.0372}{\m\per\s\squared}\]
+\subsubsection{Vitesses}
 
-
-\paragraph{Vitesses}
 % Par intégration de la formule \ref{eq:acceleration_sphere}, l'équation de vitesse peut être calculée.
 
 % \begin{equation}
@@ -291,6 +299,86 @@ Pour déterminer les expression pour la vitesse finale et le temps nécessaire p
 
 Avec tous ces valeurs, nous pouvons finalement calculer les vitesses des billes sur différentes parties de la pièce, leur vitesses, quand elles quittent la pièce et tombent dans leur réservoir final correspondant et les temps nécessaire pour chaque des ces valeurs.
 
+Ici, les vitesses sont déterminés à travers des accélérations et les distances. Comme la longueur supplémentaire de la pente est négligeable en comparaison avec la longueur totale de la pièce (voir formule \ref{eq:length_neglect}), tous les calculs sont fait sur la projection de la pente sur la cote de bas.
+
+\begin{equation}
+    l = \sqrt{\text{hauteur}^2 + \text{longueur}^2} = \sqrt{(\SI{2}{\mm})^2 + (\SI{169}{\mm})^2} \approx \SI{169.012}{\mm} \approx \SI{169}{\mm}
+    \label{eq:length_neglect}
+\end{equation}
+
+Les billes arrivent sur la pièce à une position $A$ environ \SI{8}{\mm} du bout de la pièce. Les billes de \SI{5}{\mm} de diamètre roulent sur la distance $\overline{AB}$, les billes de \SI{6}{\mm} sur la distance $\overline{AC}$ et les billes de \SI{7}{\mm} sur la distance $\overline{AD}$. Les distance entre les différentes points se trouvent dans la table \ref{tab:sphere_rolling_distance}.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        $\overline{AB}$ & $\overline{BC}$ & $\overline{CD}$ & Total \\
+        \hline
+        \SI{52}{\mm} & \SI{54}{\mm} & \SI{54}{\mm} & \SI{54}{\mm} \\
+        \hline
+    \end{tabular}
+    \caption{Distances parcourues ($d$) par les billes entre différentes points sur la pièce}
+    \label{tab:sphere_rolling_distance}
+\end{table}
+
+Les valeurs trouvés des accélérations en \ref{eq:acceleration_sphere}, la vitesse initiale de \ref{eq:initialV_rails} et les distances de \ref{tab:sphere_rolling_distance} sont insérés dans la formule \ref{eq:velocities_spheres} pour obtenir les vitesses en calculant la somme de différentes accélération sur les différentes distances parcourues. Les valeurs en gras démontrent les vitesses finales des billes quand elles tombent de la pièce au dessous.
+
+\begin{equation}
+    v=\sqrt{2ad +{v_{0}}^{2}}
+    \label{eq:velocities_spheres}
+\end{equation}
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+         & \SI{7}{\mm} & \SI{6}{\mm} & \SI{5}{\mm} \\
+        \hline
+        $A$ & \SI{0.182}{\m\per\s} & \SI{0.182}{\m\per\s} & \SI{0.182}{\m\per\s} \\
+        \hline
+        $B$ & \SI{0.201}{\m\per\s} & \SI{0.201}{\m\per\s} & \textbf{\SI{0.201}{\m\per\s}} \\
+        \hline
+        $C$ & \SI{0.215}{\m\per\s} & \textbf{\SI{0.211}{\m\per\s}} & - \\
+        \hline
+        $D$ & \textbf{\SI{0.224}{\m\per\s}} & - & - \\
+        \hline
+    \end{tabular}
+    \caption{Valeurs des vitesses ($v$) des billes sur différentes parties de la pièce, la vitesse au point $A$ est égale à $v_{0}$}
+    \label{tab:sphere_velocities}
+\end{table}
+
+Avec les résultats trouvés dans la table \ref{tab:sphere_velocities}, nous constatons que la seule section où un coincement sera possible se trouve sur le rail avec \SI{5.2}{\mm} d'écartement, cause de deux types de billes se trouvant au même endroit avec des vitesses déviantes. Mais comme les billes de \SI{7}{\mm} sont seulement \SI{1.84}{\percent} plus vites que les billes de \SI{6}{\mm}, cette différence est négligeable. Le cas où les billes sautent d'un réservoir au prochain peut aussi être exclus, grâce à la vitesse relativement lente des billes, le revêtement des réservoir et les parois entre eux.
+
+\subsubsection{Temps}
+
+Pour conclure les calculs de cette pièce, les temps nécessaires pour la traverser sont calculées. Ceux se calculent en insérant les valeurs du tableau \ref{tab:sphere_rolling_distance}, du tableau \ref{tab:accelerations_sphere} et de la formule \ref{eq:initialV_rails} dans la formule \ref{eq:rolling_time}. Les résultats se trouvent dans le tableau \ref{tab:results_rolling_time}.
+
+\begin{equation}
+     t = \frac{v - v_{0}}{a}
+     \label{eq:rolling_time}
+\end{equation}
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+         & \SI{7}{\mm} & \SI{6}{\mm} & \SI{5}{\mm} \\
+        \hline
+        $A$ & \SI{0}{\s} & \SI{0}{\s} & \SI{0}{\s} \\
+        \hline
+        $B$ & \SI{0.272}{\s} & \SI{0.272}{\s} & \SI{0.272}{\s} \\
+        \hline
+        $C$ & \SI{0.260}{\s} & \SI{0.262}{\s} & - \\
+        \hline
+        $D$ & \SI{0.246}{\s} & - & - \\
+        \hline\hline
+        $\Sigma$ & \textbf{\SI{0.767}{\s}} & \textbf{\SI{0.534}{\s}} & \textbf{\SI{0.272}{\s}} \\
+        \hline
+    \end{tabular}
+    \caption{Temps nécessaire ($t$) de chaque type de bille pour traverser la pièce jusqu'au point où elles tombent dans leur réservoir approprié}
+    \label{tab:results_rolling_time}
+\end{table}
+
 % La vitesse finale d'une bille au bout de la pièce se calcule en insérant la valeur de la formule \ref{eq:initialV_rails} dans \ref{eq:velocity_sphere_alg}.
 
 % \[v = \int \dot{v} \ dt = \frac{-5(\sin({\alpha_{\text{pente}}) f\cos(\alpha_{\text{pente}})})g \cdot t}{7} + v_{0}\]
@@ -298,27 +386,6 @@ Avec tous ces valeurs, nous pouvons finalement calculer les vitesses des billes 
 % Le temps $t$, dont une bille a besoin pour traverser la pièce est calculée en \ref{eq:rolling_time}. En avant, la distance parcourue de la bille sur la pièce est calculée.
 
 % \[l = \sqrt{\text{hauteur}^2 + \text{longueur}^2} = \sqrt{(\SI{2}{\mm})^2 + (\SI{169}{\mm})^2} \approx \SI{169.012}{\mm}\]
-
-% Temps nécessaire sans vélocité initiale:
-% \begin{equation}
-%     t = \sqrt{\frac{2l}{a}} \approx \sqrt{\frac{2 \cdot \SI{169.012}{\mm}}{\SI{0.0125}{\metre\per\second\squared}}} \approx \SI{5189.83}{\s}
-%     \label{eq:rolling_time}
-% \end{equation}
-
-% La vélocité d'une bille au bout des rails se calcule en insérant la vélocité initiale de \ref{eq:initialV_rails}, l'accélération de \ref{eq:acceleration_sphere} et la longueur de la pente de la pièce de \ref{eq:partlength}, dans la formule \ref{eq:final_velocity_1}.
-
-% \begin{equation}
-%     l = \sqrt{\text{hauteur}^2 + \text{longueur}^2} = \sqrt{(\SI{2}{\mm})^2 + (\SI{169}{\mm})^2} \approx \SI{169.012}{\mm}
-%     \label{eq:partlength}
-% \end{equation}
-
-% \begin{equation}
-%     v=\sqrt{2ad +{v_{0}}^{2}}
-%     \label{eq:final_velocity_1}
-% \end{equation}
-
-% \[\approx \sqrt{(2 \cdot {\SI{0.0125}{\m\per\second\squared}} \cdot \SI{0.169}{\m}) + {(\SI{0.182}{\m\per\s}})^{2}} \approx \SI{1.834}{\m\per\s}\]
-
 
 \section{Réservoir pour les billes triées}
 La version finale du réservoir pour les billes triées était le troisième brouillon. Au contraire du premier brouillon, la version finale nous permet d'enlever les containers avec les billes triées séparément, et cela sans que la construction des pièces soit difficile, ce qui a exclu le deuxième brouillon. Voici ces deux raisons principales en plus de détail:
