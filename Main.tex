@@ -15,8 +15,9 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{booktabs}
+\usepackage{subcaption} 
 
-\usepackage{hyperref}
+%\usepackage{hyperref}
 
 %\usepackage{ulem} % Strikethrough & underline
 %\usepackage{authblk}
@@ -24,6 +25,22 @@
 \newcommand{\estimates}{\mathrel{\hat{=}}}
 
 \sisetup{detect-weight=true}
+
+% \makeatletter
+% \def\@makechapterhead#1{
+%   \vspace*{30\p@}
+%   {\parindent \z@ \raggedright \normalfont
+%     \ifnum \c@secnumdepth >\m@ne
+%       \if@mainmatter
+%         \interlinepenalty\@M
+% 				\Huge \bfseries \thechapter \quad
+%       \fi
+%     \fi
+%     \Huge \bfseries #1\par\nobreak
+%     \vskip 20\p@
+%   }}
+% \g@addto@macro\bfseries{\boldmath}
+% \makeatother
 
 \newlength{\tabtoX}
 \setlength{\tabtoX}{1.5cm}
@@ -60,12 +77,12 @@
 
 \include{Sections/Concepts}
 \include{Sections/Justifications}
-\include{Sections/Descriptifs}
-\include{Sections/Dessins_ensemble}
-\include{Sections/Dessins_detail_usinees}
 \include{Sections/Plan}
 \include{Sections/Mode_emploi}
 \include{Sections/Synthese}
+\include{Sections/Dessins_ensemble}
+\include{Sections/Dessins_detail_usinees}
+
 \appendix
 \include{Sections/Annexe}
 
