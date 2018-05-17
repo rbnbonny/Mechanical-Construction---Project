@@ -1,13 +1,12 @@
 \chapter{Concepts}
 Pour parvenir à créer une machine capable de trier des billes de roulement à bille, il nous a fallu résoudre deux problèmes: l'acheminement des billes, et leur tri.
 
-%\section{Répartition du projet}
-
 Vu que nous étions un groupe de quatre étudiants, nous avons décidé de répartir la machine en quatre parties. Les deux problèmes principaux susmentionnés ont été les deux divisés en deux. Ensuite, chacun de nous s'est occupé de concevoir le/les mécanisme/s nécessaire/s pour que la machine, dans son ensemble, puisse satisfaire les conditions imposées par le cahier des charges. Notre division fut la suivante:
+
 \begin{itemize}
     \item Réservoir pour les billes mixtes
     \item Acheminement
-    \item Séparation \& tri
+    \item Séparation et tri
     \item Réservoirs pour les billes triées
 \end{itemize}
 
@@ -16,21 +15,22 @@ Vu que nous étions un groupe de quatre étudiants, nous avons décidé de répa
 \subsection{Concepts imaginés}
 Nous avons dans un premier temps imaginé un réservoir rectangulaire, en forme de parallélépipède creux. Mais l’usinage d’une telle pièce exige le forage d’un cube de métal, ce qui entraîne un important gaspillage.
 
-Ensuite, l’idée d’un cylindre creux associé à un fond sphérique est apparue comme étant la plus économe et la plus rapide à assembler (Figure 3.1). En effet, le cylindre peut être un simple tuyau coupé à la bonne longueur et usiné sur un seul côté pour permettre la sortie du réservoir. Le fond incliné consiste en une plaque sphérique usinée pour obtenir l'inclinaison nécessaire à l'évacuation des billes. De plus, les deux pièces peuvent facilement être assemblées grâce à 2 vis.
+Ensuite, l’idée d’un cylindre creux associé à un fond sphérique est apparue comme étant la plus économe et la plus rapide à assembler \ref{fig:res_cyl}. En effet, le cylindre peut être un simple tuyau coupé à la bonne longueur et usiné sur un seul côté pour permettre la sortie du réservoir. Le fond incliné consiste en une plaque sphérique usinée pour obtenir l'inclinaison nécessaire à l'évacuation des billes. De plus, les deux pièces peuvent facilement être assemblées grâce à 2 vis.
 
-\begin{figure}
+\begin{figure}[htb]
     \centering
-    \includegraphics[width=\textwidth]{Graphics/Reservoir_initial/RESERVOIR_CYLINDRIQUE.pdf}
+    \includegraphics[width=0.5\textwidth]{Graphics/Reservoir_initial/RESERVOIR_CYLINDRIQUE.pdf}
     \caption{Réservoir cylindrique}
-    %\label{fig:B4}
+    \label{fig:res_cyl}
 \end{figure}
 
-Après, nous avons conçu un réservoir en deux pièces usinées, une partie arrière associée à un fond incliné, pour répondre aux exigences de forme à l'entrée du distributeur (Figure 3.2). En effet, une rampe d'accès rectangulaire était plus pratique et plus simple que celle du réservoir cylindrique.
-\begin{figure}
+Après, nous avons conçu un réservoir en deux pièces usinées, une partie arrière associée à un fond incliné, pour répondre aux exigences de forme à l'entrée du distributeur \ref{fig:res_rect}. En effet, une rampe d'accès rectangulaire était plus pratique et plus simple que celle du réservoir cylindrique.
+
+\begin{figure}[htb]
     \centering
     \includegraphics[width=0.5\textwidth]{Graphics/Reservoir_initial/RESERVOIR_CUBE.pdf}
     \caption{Réservoir rectangulaire}
-    %\label{fig:B4}
+    \label{fig:res_rect}
 \end{figure}
 
 Finalement, nous avons décidé d'incorporer le réservoir au reste de la machine, pour gagner en simplicité lors de l'assemblage et pour diminuer le nombre de pièces. Ainsi, les parois latérales de la machine se prolongent pour former le réservoir initial dans lequel les billes sont versées avant leur tri. Une seule plaque supplémentaire est nécessaire pour former le fond de ce réservoir, légèrement inclinée pour assurer la descente des billes vers le distributeur. L'ensemble est assemblé simplement grâce à quatre goupilles. 
@@ -38,54 +38,55 @@ Finalement, nous avons décidé d'incorporer le réservoir au reste de la machin
 \section{Acheminement}
 Ce mécanisme devait satisfaire plusieurs contraintes et demandes à la fois. Il était prescrit que notre machine s'opère à une main et que le tri des billes soit déclenché par l'utilisateur et ne se déclenche pas soi-même. De plus, tout coincement devait être prévenu.
 
-Les options élaborées en groupe étaient alors les suivantes:\\
-Pour l'entraînement des billes:
+Les options élaborées en groupe étaient alors les suivantes:
 
-\subsection{Convoyeur à vis}
+\subsection{Entraînement}
+
+\subsubsection{Convoyeur à vis}
 Notre première idée fut un convoyeur à vis qui transporte les billes vers les rails. Les billes qui sortent du réservoir mixte roulent vers le convoyeur à vis. La rotation provenant de la manivelle les entraîne ensuite vers les rails.
 
 \begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{Graphics/Images_concepts_Leon/795-Screw_conveyor_Kopie.png}
+    \includegraphics[width=0.5\textwidth]{Graphics/Images_concepts_Leon/795-Screw_conveyor_Kopie.png}
     \caption{Convoyeur à vis}
     %\label{fig:B4}
 \end{figure}
 
 Après réflexion, cette idée fut impraticable à cause de plusieurs raisons. Premièrement, le coût serait sûrement plus élevé que celui des autres alternatives, et deuxièmement, nous ne trouvions pas de solution satisfaisante pour empêcher de manière certaine le coincement des billes.
 
-\subsection{Cylindre avec des trous}
+\subsubsection{Cylindre avec des trous}
 La deuxième option que nous avons élaboré était un long cylindre avec de petits trous usinés à sa surface. Comme avec le convoyeur à vis, les billes roulent hors du réservoir mixte et tombent dans les trous du cylindre tournant. Comme pour la première idée, nous prévoyions une manivelle pour l'opération du mécanisme.
 
-\begin{figure}
+\begin{figure}[b]
     \centering
-    \includegraphics[width=\textwidth]{Graphics/Roue/DRAWING_PROTOTYP_CYLINDRE.pdf}
+    \includegraphics[width=0.5\textwidth]{Graphics/Roue/DRAWING_PROTOTYP_CYLINDRE.pdf}
     \caption{Cylindre avec trous}
     %\label{fig:B5}
 \end{figure}
 
 Cette option a finalement été abandonnée, car l'acheminement serait plus lent, on n'aurait pas de certitude que les trous se remplissent bien et sans empilement, et un coincement serait difficile à prévenir. De plus, la fabrication aurait été légèrement plus compliquée que celle de la troisième option (cf. en bas).
 
-\subsection{Distributeur avec cylindres décalés}
+\subsubsection{Distributeur avec cylindres décalés}
 Notre troisième idée était de simplement monter plusieurs cylindres fins perforés sur une barre. Les trous usinés à la surface de ces cylindres accueillent exactement une bille, quelle que soit sa taille. Deux cylindres voisins sont ensuite décalés d'un cran pour éviter tout coincement à l'entrée du distributeur.
-
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{Graphics/Images_concepts_Leon/ROUE_SUR_BARRE.pdf}
-    \caption{Cylindres perforés décalés}
-    %\label{fig:B6}
-\end{figure}
 
 Les billes provenant du réservoir mixte roulent alors avec une vitesse modérée, grâce à la pente de \ang{3}, vers les cylindres perforés. Elles tombent ensuite entre les trous et sont entraînées vers les rails par la rotation des cylindres, actionnée par la manivelle.
 
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{Graphics/Images_concepts_Leon/ASSEMBLAGE_LOURD.pdf}
-    \caption{Cylindres perforés décalés (mécanisme complet)}
-    %\label{fig:B7}
+\begin{figure}[h]
+    \begin{minipage}[c]{0.45\linewidth}
+        \centerfloat
+        \includegraphics[width=1.4\linewidth]{Graphics/Images_concepts_Leon/ROUE_SUR_BARRE.pdf}
+        \caption{Cylindres perforés \\ décalés}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.45\linewidth}
+        \centerfloat
+        \includegraphics[width=1.3\linewidth]{Graphics/Images_concepts_Leon/ASSEMBLAGE_LOURD.pdf}
+        \caption{Cylindres perforés décalés (mécanisme complet)}
+    \end{minipage}
 \end{figure}
 
-Pour le déblocage: %altérer
-\subsection{Pivot débloquant} 
+\subsection{Déblocage}
+\subsubsection{Pivot débloquant} 
 Notre première option pour le déblocage fut un pivot positionné à la sortie du réservoir mixte. Ce pivot aurait été connecté à l'axe de rotation de l'acheminement par une chaîne ou une autre connexion permettant la transformation de la rotation en "pivotement". Ainsi, tout empilement pouvant créer un coincement des billes dans le réservoir mixte aurait été empêché par l'utilisation de la manivelle.
 
 \begin{figure}
@@ -95,24 +96,24 @@ Notre première option pour le déblocage fut un pivot positionné à la sortie 
     %\label{fig:B8}
 \end{figure}
 
-\subsection{Couvercle pour la roue dentée}
+\subsubsection{Couvercle pour le distributeur}
 Comme mécanisme de déblocage supplémentaire, nous prévoyions un couvercle pour le mécanisme d'acheminement. Avec des trous d'une profondeur de \SI{5}{\milli\metre}, même les billes de diamètre \SI{7}{\milli\metre} peuvent passer sous un couvercle à distance \SI{2.5}{\milli\metre} du mécanisme d'acheminement. Par contre, dès qu'il y aura deux billes dans un trou, même dans le pire des cas (deux billes de la taille la plus petite, soit \SI{5}{\milli\metre}), la deuxième bille heurtera le couvercle en dessous ou exactement à la hauteur de son centre de masse. Ainsi, ce système prévient tout coincement à l'entrée du distributeur et assure le passage d'une seule bille par trou.
 
 \begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{Graphics/Roue/DRAWING_COUVERCLE.pdf}
-    \caption{Couvercle}
-    %\label{fig:B9}
+    \begin{minipage}[c]{0.45\linewidth}
+        \centerfloat
+        \includegraphics[width=1.7\linewidth]{Graphics/Roue/DRAWING_COUVERCLE.pdf}
+        \caption{Couvercle}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.45\linewidth}
+        \centerfloat
+        \includegraphics[width=1.7\linewidth]{Graphics/Roue/DRAWING_COUVERCLE_DEMI_COMPLET.pdf}
+        \caption{Couvercle avec fixations}
+    \end{minipage}
 \end{figure}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{Graphics/Roue/DRAWING_COUVERCLE_DEMI_COMPLET.pdf}
-    \caption{Couvercle avec fixations}
-    %\label{fig:B10}
-\end{figure}
-
-\section{Séparation \& tri (rails)}
+\section{Séparation et tri}
 
 \subsection{Séparation}
 Après l'acheminement des billes hors du réservoir, ces dernières doivent être séparées de manière successive pour ne pas bloquer le mécanisme de tri qui suit. Comme plusieurs billes sont triées en même temps, une méthode efficace de séparation est nécessaire. 
@@ -120,9 +121,9 @@ Après l'acheminement des billes hors du réservoir, ces dernières doivent êtr
 \subsubsection{Coins}
 La première idée que nous avons trouvé était d'ordonner les billes en utilisant des coins sur un plan incliné. Cette méthode débouchait cependant sur plusieurs problèmes: la pièce est devenue très compliquée à fabriquer, à cause de l'usinage particulier des parties surélevées en forme d'ogive. De plus, le risque de coincement des billes ne pouvait pas être éliminé avec certitude.
 
-\begin{figure}
+\begin{figure}[h]
     \centering
-    \includegraphics[width=\textwidth]{Graphics/Rails/COINS.pdf}
+    \includegraphics[width=0.65\textwidth]{Graphics/Rails/COINS.pdf}
     \caption{Séparation par coins}
     %\label{fig:S_Coins}
 \end{figure}
@@ -136,8 +137,8 @@ Nous sommes conscients que cette décision d'usiner les rainures directement dan
 
 \begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{Graphics/Rails/SEPARATEUR_V.pdf}
-    \caption{Séparation par rainures en forme de "V"}
+    \includegraphics[width=0.65\textwidth]{Graphics/Rails/SEPARATEUR_V.pdf}
+    \caption{Séparation par rainures en forme "V"}
     %\label{fig:S_Rainures}
 \end{figure}
 
@@ -145,23 +146,21 @@ Nous sommes conscients que cette décision d'usiner les rainures directement dan
 Nous arrivons à la partie principale de la machine, le tri des billes en fonction de leur diamètre.
 
 \subsubsection{Ecartement graduel}
-Notre première idée pour trier des billes était d'utiliser des rails quasi-parallèles qui s'écartaient de manière graduelle. Nous avons rejeté ce concept assez vite, la raison de cette décision se trouve dans %\ref{sec} %ref Justification 
-Le problème principal de cette méthode est que les billes perdent beaucoup de leur vitesse en avançant sur les rails, ce qui mène à des bouchons et finalement au blocage du mécanisme.
+\label{ec_graduel}
+Notre première idée pour trier des billes était d'utiliser des rails quasi-parallèles qui s'écartaient de manière graduelle. Nous avons rejeté ce concept assez vite, la raison de cette décision se trouve dans \ref{ecartements}.
 
 \subsubsection{Ecartement séquentiel}
 Pour résoudre les faiblesses de l'écartement graduel, nous l'avons adapté et sommes arrivés à un écartement séquentiel. L'avantage de cette technique est que les billes ne ralentissent pas dans leurs rails, mais roulent avec une vitesse constante, jusqu'au point où se trouve le saut d'un diamètre au prochain. Elles tombent alors dans le réservoir correspondant placé en dessous.
 
 \begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{Graphics/Rails/ECARTEMENTS.pdf}
+    \includegraphics[width=0.6\textwidth]{Graphics/Rails/ECARTEMENTS.pdf}
     \caption{Comparaison d'un écartement graduel (a) et d'un écartement séquentiel (b)}
     %\label{fig:Ecartements}
 \end{figure}
 
-\subsubsection{Plaque inclinée et barres}
-Une idée alternative aux solutions avec les rails était de monter des barres au-dessus d'une plaque inclinée, de manière à ce que les billes avec un diamètre donné soient transportées à côté de la plaque et que les billes plus petites passent au-dessous de la barre jusqu'à la prochaine. Cette idée est développée en plus de détail sur la figure %ref fig
-
-% image
+\subsubsection{Plaque inclinée avec barres}
+Une idée alternative aux solutions avec les rails était de monter des barres au-dessus d'une plaque inclinée, de manière à ce que les billes avec un diamètre donné soient transportées à côté de la plaque et que les billes plus petites passent au-dessous de la barre jusqu'à la prochaine.
 
 %\subsubsection{Ecartement séquentiel avec rainures}
 %L'idée finale, qui a été retenue dans le projet, est celle des rails avec un écartement séquentiel en combinaison avec les rainures en forme "V", le tout en une seule pièce. Ainsi, les parties de séparation des billes et de leur tri sont combinées, et la complexité de l'ensemble est réduite au maximum.
@@ -174,12 +173,12 @@ La construction des rails nous a donné un espace limité où les billes d'une t
 
 \begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{Graphics/Reservoir_final/PREMIER_BROUILLON.pdf}
+    \includegraphics[width=0.9\textwidth]{Graphics/Reservoir_final/PREMIER_BROUILLON.pdf}
     \caption{Premier brouillon}
     %\label{fig:B1}
 \end{figure}
 
-Les billes devaient ainsi être enlevées du réservoir à la main, ce qui peut poser des problèmes à cause de leur petite taille. Nous avons alors décidé de faire des containers qui peuvent être retirés de la machine pour récupérer les billes. 
+Les billes devaient ainsi être enlevées du réservoir à la main, ce qui peut poser des problèmes à cause de leur petite taille. Nous avons alors décidé de faire des containers qui peuvent être retirés de la machine pour récupérer les billes.
 
 \subsection{Deuxième brouillon}
 La forme choisie pour les containers était un cube. Il nous fallait alors une rampe, afin de canaliser les billes dans les cubes, comme illustré à la figure \ref{fig:B2}. Afin d'utiliser la place de la manière la plus efficace possible, nous avons inversé l'orientation de la rampe au milieu. Ainsi, les containers ne se trouvent pas tous sur une ligne, ce qui rend la machine plus compacte. 
@@ -194,9 +193,9 @@ La forme choisie pour les containers était un cube. Il nous fallait alors une r
 \subsection{Troisième brouillon}
 Vu que l'assemblage avec des vis de plus de 4 mm n'est pas possible pour certains éléments du deuxième brouillon (i.e. les cubes) et que la fabrication par fraisage à partir d'un seul bloc est bien trop coûteux et inefficace, nous avons remanié le brouillon en respectant ces aspects. La forme allongée des containers nous a permis de supprimer les rampes au-dessous du réservoir et donc de diminuer le nombre d'éléments.
 
-\begin{figure}
+\begin{figure}[h]
     \centering
-    \includegraphics[width=\textwidth]{Graphics/Reservoir_final/TROISIEME_BROUILLON.pdf}
+    \includegraphics[width=0.7\textwidth]{Graphics/Reservoir_final/TROISIEME_BROUILLON.pdf}
     \caption{Troisième brouillon}
     %\label{fig:B3}
 \end{figure}
